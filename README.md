@@ -9,4 +9,5 @@ To learn fundamental javascript
 ### Cara Penggunaannya
 
 `nodemon [nama file]`
+<br>
 penjelasan lebih lanjut [disini](https://www.youtube.com/watch?v=xIcXqKEUpAw)
