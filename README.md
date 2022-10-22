@@ -54,6 +54,8 @@ Digunakan untuk mengubah format penulisan data number menjadi format exponensial
 
 `console.log(number2.toExponential()); //2.33e+1` <br>
 `console.log(typeof number2.toExponential()); //string` <br> <br>
+Di dalam metode toExponential ini bisa ditambahkan parameter yang mana parameter ini akan menentukan jumlah angka di belakang koma, seperti contoh dibawah ini
+
 `console.log(number2.toExponential(1)); //2.3e+1` <br>
 `console.log(typeof number2.toExponential(1)); //string` <br><br>
 `console.log(number2.toExponential(2)); //2.33e+1` <br>
