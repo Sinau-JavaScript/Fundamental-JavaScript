@@ -42,3 +42,22 @@ console.log(typeof number2.toExponential(3)); //string
 
 console.log(number2.toExponential(4));
 console.log(typeof number2.toExponential(4)); //string
+
+console.log(`----------toExponential()`);
+let numberFixed = 6.33;
+console.log(typeof numberFixed);
+
+console.log(numberFixed.toFixed()); //6
+console.log(typeof numberFixed.toFixed()); //string
+
+console.log(numberFixed.toFixed(1)); //6.3
+console.log(typeof numberFixed.toFixed(1)); //string
+
+console.log(numberFixed.toFixed(2)); //6.33
+console.log(typeof numberFixed.toFixed(2)); //string
+
+console.log(numberFixed.toFixed(3)); //6.330
+console.log(typeof numberFixed.toFixed(3)); //string
+
+console.log(numberFixed.toFixed(4)); //6.3300
+console.log(typeof numberFixed.toFixed(4)); //string
