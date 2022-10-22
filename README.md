@@ -73,7 +73,9 @@ Di dalam metode toExponential ini bisa ditambahkan parameter yang mana parameter
 Untuk mengembalikan string dan ditulis dengan jumlah desimal yang ditentukan
 
 `let numberFixed = 6.33;`<br>
-`console.log(typeof numberFixed) //number ;`
+`console.log(typeof numberFixed) //number ;` <br> <br>
+
+Sama seperti metode toExponential, di metode toFixed juga bisa ditambahkan parameter yang mana parameter ini akan menentukan jumlah angka di belakang koma, seperti contoh dibawah ini
 
 `console.log(numberFixed.toFixed()); //6` <br>
 `console.log(typeof numberFixed.toFixed()); //string`
@@ -89,3 +91,28 @@ Untuk mengembalikan string dan ditulis dengan jumlah desimal yang ditentukan
 
 `console.log(numberFixed.toFixed(4)); //6.3300` <br>
 `console.log(typeof numberFixed.toFixed(4)); //string`
+
+#### toPrecission()
+
+Untuk mengembalikan string, dengan number yang ditulis dengan ukuran panjang tertentu
+
+`console.log(typeof numberPrecission); //number` <br>
+`console.log(numberPrecission.toPrecision()); //5.67` <br>
+`console.log(typeof numberPrecission.toPrecision()); //string`
+
+di metode toPrecission juga bisa ditambahkan parameter yang mana parameter ini akan menentukan ukuran atau jumlah angka, seperti contoh dibawah ini
+
+`console.log(numberPrecission.toPrecision(1)); //6` <br>
+`console.log(typeof numberPrecission.toPrecision(1)); //string`
+
+`console.log(numberPrecission.toPrecision(2)); //5.7`
+`console.log(typeof numberPrecission.toPrecision(2)); //string`
+
+`console.log(numberPrecission.toPrecision(3)); //5.67`
+`console.log(typeof numberPrecission.toPrecision(3)); //string`
+
+`console.log(numberPrecission.toPrecision(4)); //5.670`
+`console.log(typeof numberPrecission.toPrecision(4)); //string`
+
+`console.log(numberPrecission.toPrecision(5)); //5.6700`
+`console.log(typeof numberPrecission.toPrecision(5)); //string`

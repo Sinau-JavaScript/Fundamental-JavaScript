@@ -43,7 +43,7 @@ console.log(typeof number2.toExponential(3)); //string
 console.log(number2.toExponential(4));
 console.log(typeof number2.toExponential(4)); //string
 
-console.log(`----------toExponential()`);
+console.log(`----------Fixed()`);
 let numberFixed = 6.33;
 console.log(typeof numberFixed);
 
@@ -61,3 +61,24 @@ console.log(typeof numberFixed.toFixed(3)); //string
 
 console.log(numberFixed.toFixed(4)); //6.3300
 console.log(typeof numberFixed.toFixed(4)); //string
+
+console.log(`----------toFixed()`);
+let numberPrecission = 5.67;
+console.log(typeof numberPrecission); //number
+console.log(numberPrecission.toPrecision()); //5.67
+console.log(typeof numberPrecission.toPrecision()); //string
+
+console.log(numberPrecission.toPrecision(1)); //6
+console.log(typeof numberPrecission.toPrecision(1)); //string
+
+console.log(numberPrecission.toPrecision(2)); //5.7
+console.log(typeof numberPrecission.toPrecision(2)); //string
+
+console.log(numberPrecission.toPrecision(3)); //5.67
+console.log(typeof numberPrecission.toPrecision(3)); //string
+
+console.log(numberPrecission.toPrecision(4)); //5.670
+console.log(typeof numberPrecission.toPrecision(4)); //string
+
+console.log(numberPrecission.toPrecision(5)); //5.6700
+console.log(typeof numberPrecission.toPrecision(5)); //string
