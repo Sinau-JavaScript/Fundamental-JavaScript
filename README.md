@@ -50,18 +50,21 @@ Digunakan untuk mengembalikan/mengubah tipe data suatu variabel menjadi string <
 Digunakan untuk mengubah format penulisan data number menjadi format exponensial dan merubah tipe datanya menjadi string <br>
 
 `let number2 = 23.3;` <br>
-`console.log(typeof number2); //number` <br> <br>
+`console.log(typeof number2); //number`
 
 `console.log(number2.toExponential()); //2.33e+1` <br>
 `console.log(typeof number2.toExponential()); //string` <br> <br>
 Di dalam metode toExponential ini bisa ditambahkan parameter yang mana parameter ini akan menentukan jumlah angka di belakang koma, seperti contoh dibawah ini
 
 `console.log(number2.toExponential(1)); //2.3e+1` <br>
-`console.log(typeof number2.toExponential(1)); //string` <br><br>
+`console.log(typeof number2.toExponential(1)); //string`
+
 `console.log(number2.toExponential(2)); //2.33e+1` <br>
-`console.log(typeof number2.toExponential(2)); //string` <br> <br>
+`console.log(typeof number2.toExponential(2)); //string`
+
 `console.log(number2.toExponential(3)); //2.330e+1` <br>
-`console.log(typeof number2.toExponential(3)); //string` <br><br>
+`console.log(typeof number2.toExponential(3)); //string`
+
 `console.log(number2.toExponential(4)); //2.3300e+1` <br>
 `console.log(typeof number2.toExponential(4)); //string`
 
