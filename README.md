@@ -76,17 +76,16 @@ Untuk mengembalikan string dan ditulis dengan jumlah desimal yang ditentukan
 `console.log(typeof numberFixed) //number ;`
 
 `console.log(numberFixed.toFixed()); //6` <br>
-`console.log(typeof numberFixed.toFixed()); //string` <br><br>
+`console.log(typeof numberFixed.toFixed()); //string`
 
-`console.log(numberFixed.toFixed(1)); //6.3`
-
+`console.log(numberFixed.toFixed(1)); //6.3` <br>
 `console.log(typeof numberFixed.toFixed(1)); //string`
 
-console.log(numberFixed.toFixed(2)); //6.33
-console.log(typeof numberFixed.toFixed(2)); //string
+`console.log(numberFixed.toFixed(2)); //6.33` <br>
+`console.log(typeof numberFixed.toFixed(2)); //string`
 
-console.log(numberFixed.toFixed(3)); //6.330
-console.log(typeof numberFixed.toFixed(3)); //string
+`console.log(numberFixed.toFixed(3)); //6.330` <br>
+`console.log(typeof numberFixed.toFixed(3)); //string`
 
-console.log(numberFixed.toFixed(4)); //6.3300
-console.log(typeof numberFixed.toFixed(4)); //string
+`console.log(numberFixed.toFixed(4)); //6.3300` <br>
+`console.log(typeof numberFixed.toFixed(4)); //string`
