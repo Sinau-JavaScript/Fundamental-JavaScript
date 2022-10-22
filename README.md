@@ -105,14 +105,14 @@ di metode toPrecission juga bisa ditambahkan parameter yang mana parameter ini a
 `console.log(numberPrecission.toPrecision(1)); //6` <br>
 `console.log(typeof numberPrecission.toPrecision(1)); //string`
 
-`console.log(numberPrecission.toPrecision(2)); //5.7`
+`console.log(numberPrecission.toPrecision(2)); //5.7` <br>
 `console.log(typeof numberPrecission.toPrecision(2)); //string`
 
-`console.log(numberPrecission.toPrecision(3)); //5.67`
+`console.log(numberPrecission.toPrecision(3)); //5.67` <br>
 `console.log(typeof numberPrecission.toPrecision(3)); //string`
 
-`console.log(numberPrecission.toPrecision(4)); //5.670`
+`console.log(numberPrecission.toPrecision(4)); //5.670` <br>
 `console.log(typeof numberPrecission.toPrecision(4)); //string`
 
-`console.log(numberPrecission.toPrecision(5)); //5.6700`
+`console.log(numberPrecission.toPrecision(5)); //5.6700` <br>
 `console.log(typeof numberPrecission.toPrecision(5)); //string`
