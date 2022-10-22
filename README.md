@@ -64,3 +64,26 @@ Di dalam metode toExponential ini bisa ditambahkan parameter yang mana parameter
 `console.log(typeof number2.toExponential(3)); //string` <br><br>
 `console.log(number2.toExponential(4)); //2.3300e+1` <br>
 `console.log(typeof number2.toExponential(4)); //string`
+
+#### toFixed()
+
+Untuk mengembalikan string dan ditulis dengan jumlah desimal yang ditentukan
+
+`let numberFixed = 6.33;`<br>
+`console.log(typeof numberFixed) //number ;`
+
+`console.log(numberFixed.toFixed()); //6` <br>
+`console.log(typeof numberFixed.toFixed()); //string` <br><br>
+
+`console.log(numberFixed.toFixed(1)); //6.3`
+
+`console.log(typeof numberFixed.toFixed(1)); //string`
+
+console.log(numberFixed.toFixed(2)); //6.33
+console.log(typeof numberFixed.toFixed(2)); //string
+
+console.log(numberFixed.toFixed(3)); //6.330
+console.log(typeof numberFixed.toFixed(3)); //string
+
+console.log(numberFixed.toFixed(4)); //6.3300
+console.log(typeof numberFixed.toFixed(4)); //string
