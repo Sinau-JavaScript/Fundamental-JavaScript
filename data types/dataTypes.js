@@ -1,0 +1,44 @@
+console.log("-------------- Check Tipe data -------");
+let x = "hello world";
+let y = 10;
+console.log(typeof x); //string
+console.log(typeof y); //number
+
+console.log("------------- Tipe data number------------");
+// angaka spesial
+console.log(2 / 0); // Infinity
+console.log(-2 / 0); // -Infinity
+console.log(0 / 0); //NaN
+console.log(100 / "sepuluh"); // NaN
+console.log(100 / "10"); // 10
+console.log(10 - "1"); // 9
+console.log(10 + "1"); // 101
+console.log(100 * "10"); //1000
+console.log(123e5); //12300000
+console.log(123e-5); //0.00123
+
+console.log(`--------------- Number Methods ----------`);
+console.log(`----------- toString()`);
+let number = 23010;
+console.log(typeof number); //number
+let tostring = number.toString();
+console.log(typeof tostring); //string
+
+console.log(`----------toExponential()`);
+let number2 = 23.3;
+console.log(typeof number2);
+
+console.log(number2.toExponential()); //2.33e+1
+console.log(typeof number2.toExponential()); //string
+
+console.log(number2.toExponential(1));
+console.log(typeof number2.toExponential(1)); //string
+
+console.log(number2.toExponential(2));
+console.log(typeof number2.toExponential(2)); //string
+
+console.log(number2.toExponential(3));
+console.log(typeof number2.toExponential(3)); //string
+
+console.log(number2.toExponential(4));
+console.log(typeof number2.toExponential(4)); //string

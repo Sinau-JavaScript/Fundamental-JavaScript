@@ -14,6 +14,13 @@ penjelasan lebih lanjut [disini](https://www.youtube.com/watch?v=xIcXqKEUpAw)
 
 ## Data Types
 
+### Check a Data Type
+
+` let x = "hello world";` <br>
+`let y = 10;` <br>
+`console.log(typeof x); //string` <br>
+`console.log(typeof y); //number`
+
 ### Tipe Data Number
 
 #### Angka Spesial
@@ -26,3 +33,32 @@ penjelasan lebih lanjut [disini](https://www.youtube.com/watch?v=xIcXqKEUpAw)
 ` console.log(100 \* "10"); //1000` <br>
 `console.log(123e5); //12300000` <br>
 `console.log(123e-5); //0.00123` <br>
+
+#### Number Methods
+
+#### toString()
+
+Digunakan untuk mengembalikan/mengubah tipe data suatu variabel menjadi string <br>
+
+`let number = 23010;` <br>
+`console.log(typeof number); //number` <br>
+`let tostring = number.toString();` <br>
+`console.log(typeof tostring); //string` <br>
+
+#### toExponential()
+
+Digunakan untuk mengubah format penulisan data number menjadi format exponensial dan merubah tipe datanya menjadi string <br>
+
+`let number2 = 23.3;` <br>
+`console.log(typeof number2); //number` <br> <br>
+
+`console.log(number2.toExponential()); //2.33e+1` <br>
+`console.log(typeof number2.toExponential()); //string` <br> <br>
+`console.log(number2.toExponential(1)); //2.3e+1` <br>
+`console.log(typeof number2.toExponential(1)); //string` <br><br>
+`console.log(number2.toExponential(2)); //2.33e+1` <br>
+`console.log(typeof number2.toExponential(2)); //string` <br> <br>
+`console.log(number2.toExponential(3)); //2.330e+1` <br>
+`console.log(typeof number2.toExponential(3)); //string` <br><br>
+`console.log(number2.toExponential(4)); //2.3300e+1` <br>
+`console.log(typeof number2.toExponential(4)); //string`
