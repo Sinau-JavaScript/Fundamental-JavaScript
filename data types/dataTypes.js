@@ -17,6 +17,12 @@ console.log(100 * "10"); //1000
 console.log(123e5); //12300000
 console.log(123e-5); //0.00123
 
+console.log("-------------- isNaN()----------------");
+console.log(isNaN(10)); //false
+console.log(isNaN("7")); //false
+console.log(typeof "7"); //stirng
+console.log(isNaN("contoh")); //true
+
 console.log(`--------------- Number Methods ----------`);
 console.log(`----------- toString()`);
 let number = 23010;

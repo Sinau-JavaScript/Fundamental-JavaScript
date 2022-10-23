@@ -39,6 +39,15 @@ penjelasan lebih lanjut [disini](https://www.youtube.com/watch?v=xIcXqKEUpAw)
 `console.log(123e5); //12300000` <br>
 `console.log(123e-5); //0.00123` <br>
 
+#### isNaN()
+
+Untuk mengecek data sebuah variabel NaN atau bukan, jikan NaN method ini akan mengembalikan nilai true jika bukan NaN method ini akan mengembalikan nilai false
+
+`console.log(isNaN(10)); //false` <br>
+`console.log(isNaN("7")); //false` <br>
+`console.log(typeof "7"); //stirng` <br>
+`console.log(isNaN("contoh")); //true`
+
 #### Number Methods
 
 #### toString()
