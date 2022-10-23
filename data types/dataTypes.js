@@ -23,6 +23,12 @@ console.log(isNaN("7")); //false
 console.log(typeof "7"); //stirng
 console.log(isNaN("contoh")); //true
 
+console.log("-------------- isNaN()----------------");
+console.log(Number.isInteger(1)); //true
+console.log(Number.isInteger(2.5)); //false
+console.log(Number.isInteger("2")); //false
+console.log(Number.isInteger("tiga")); //false
+
 console.log(`--------------- Number Methods ----------`);
 console.log(`----------- toString()`);
 let number = 23010;

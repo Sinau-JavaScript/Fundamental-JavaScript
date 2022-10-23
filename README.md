@@ -48,6 +48,15 @@ Untuk mengecek data sebuah variabel NaN atau bukan, jikan NaN method ini akan me
 `console.log(typeof "7"); //stirng` <br>
 `console.log(isNaN("contoh")); //true`
 
+#### Number.isInteger()
+
+Untuk mengecek value sebuah variabel integer atau bukan, jika integer method ini akan mengembalikan nilai true tetapi jika bukan method ini akan mengambalikan false
+
+`console.log(Number.isInteger(1)); //true` <br>
+`console.log(Number.isInteger(2.5)); //false` <br>
+`console.log(Number.isInteger("2")); //false` <br>
+`console.log(Number.isInteger("tiga")); //false` <br>
+
 #### Number Methods
 
 #### toString()
