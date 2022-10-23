@@ -23,6 +23,11 @@ penjelasan lebih lanjut [disini](https://www.youtube.com/watch?v=xIcXqKEUpAw)
 
 ### Tipe Data Number
 
+#### integer dan float
+
+`let num1 = 1 //integer`<br>
+`let num2 = 1.5 //float`
+
 #### Angka Spesial
 
 `console.log(2 / 0); // Infinity` <br>
