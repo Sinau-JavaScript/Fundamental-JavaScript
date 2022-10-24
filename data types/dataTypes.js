@@ -112,3 +112,22 @@ console.log(typeof parseInt("10.5")); //number
 
 console.log(parseInt("oke")); //NaN;
 console.log(typeof parseInt("oke")); //number
+
+console.log("-----------parseFloat()");
+console.log(10); //10
+console.log(parseFloat(11.45)); //11.45
+console.log(parseFloat(11.6)); //11.6
+
+console.log(parseFloat("10")); //10
+console.log(typeof parseFloat("10")); //number
+
+console.log(parseFloat("10.45")); //10.45
+console.log(parseFloat("10 45")); //10
+
+console.log(parseFloat("10 years")); //10
+console.log(typeof parseFloat("10 years")); //number
+
+console.log(parseFloat("years 10")); //NaN
+console.log(typeof parseFloat("years 10")); //number
+
+// function, looping, mthod array, method object, method string, method math, percabangan logic (if else or and dll), ternary

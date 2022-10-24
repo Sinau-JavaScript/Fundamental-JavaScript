@@ -57,7 +57,7 @@ Untuk mengecek value sebuah variabel integer atau bukan, jika integer method ini
 `console.log(Number.isInteger("2")); //false` <br>
 `console.log(Number.isInteger("tiga")); //false` <br>
 
-#### Number Methods
+### Number Methods
 
 #### toString()
 
@@ -140,7 +140,11 @@ di metode toPrecission juga bisa ditambahkan parameter yang mana parameter ini a
 `console.log(numberPrecission.toPrecision(5)); //5.6700` <br>
 `console.log(typeof numberPrecission.toPrecision(5)); //string`
 
+### Convert to Number
+
 #### toParseInt()
+
+Untuk mengembalikan argumentnya menjadi float
 
 `console.log(parseInt(2)); //2` <br>
 `console.log(typeof parseInt(2)); //number` <br>
@@ -157,3 +161,23 @@ di metode toPrecission juga bisa ditambahkan parameter yang mana parameter ini a
 
 `console.log(parseInt("oke")); //NaN;` <br>
 `console.log(typeof parseInt("oke")); //number` <br>
+
+#### parseFloat()
+
+Untuk mengembalikan argumentnya menjadi float
+
+`console.log(10); //10` <br>
+`console.log(parseFloat(11.45)); //11.45` <br>
+`console.log(parseFloat(11.6)); //11.6` <br>
+
+`console.log(parseFloat("10")); //10` <br>
+`console.log(typeof parseFloat("10")); //number`
+
+`console.log(parseFloat("10.45")); //10.45` <br>
+`console.log(parseFloat("10 45")); //10`
+
+`console.log(parseFloat("10 years")); //10` <br>
+`console.log(typeof parseFloat("10 years")); //number`
+
+`console.log(parseFloat("years 10")); //NaN` <br>
+`console.log(typeof parseFloat("years 10")); //number`
