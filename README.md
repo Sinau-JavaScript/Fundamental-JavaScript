@@ -117,7 +117,7 @@ Sama seperti metode toExponential, di metode toFixed juga bisa ditambahkan param
 
 #### toPrecission()
 
-Untuk mengembalikan string, dengan number yang ditulis dengan ukuran panjang tertentu
+Untuk mengembalikan string, dengan number yang ditulis dengan ukuran panjang tertentu <br>
 `let numberPrecission = 5.67;`<br>
 `console.log(typeof numberPrecission); //number` <br>
 `console.log(numberPrecission.toPrecision()); //5.67` <br>
