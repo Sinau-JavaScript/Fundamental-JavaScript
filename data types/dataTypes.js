@@ -94,3 +94,21 @@ console.log(typeof numberPrecission.toPrecision(4)); //string
 
 console.log(numberPrecission.toPrecision(5)); //5.6700
 console.log(typeof numberPrecission.toPrecision(5)); //string
+
+console.log("---------- Convert to Number ------------");
+console.log("-----------parseInt");
+console.log(parseInt(2)); //2
+console.log(typeof parseInt(2)); //number
+
+console.log(parseInt(3.9)); //3
+console.log(typeof parseInt(3.9)); //number
+
+console.log(parseInt("10")); //10
+console.log(typeof "10"); //string
+console.log(typeof parseInt(`10`)); //number
+
+console.log(parseInt("10.5")); //10
+console.log(typeof parseInt("10.5")); //number
+
+console.log(parseInt("oke")); //NaN;
+console.log(typeof parseInt("oke")); //number

@@ -139,3 +139,21 @@ di metode toPrecission juga bisa ditambahkan parameter yang mana parameter ini a
 
 `console.log(numberPrecission.toPrecision(5)); //5.6700` <br>
 `console.log(typeof numberPrecission.toPrecision(5)); //string`
+
+#### toParseInt()
+
+`console.log(parseInt(2)); //2` <br>
+`console.log(typeof parseInt(2)); //number` <br>
+
+`console.log(parseInt(3.9)); //3` <br>
+`console.log(typeof parseInt(3.9)); //number` <br>
+
+`console.log(parseInt("10")); //10` <br>
+`console.log(typeof "10"); //string` <br>
+`console.log(typeof parseInt("10")); //number` <br>
+
+`console.log(parseInt("10.5")); //10` <br>
+`console.log(typeof parseInt("10.5")); //number` <br>
+
+`console.log(parseInt("oke")); //NaN;` <br>
+`console.log(typeof parseInt("oke")); //number` <br>
