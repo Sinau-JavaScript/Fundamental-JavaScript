@@ -142,7 +142,7 @@ di metode toPrecission juga bisa ditambahkan parameter yang mana parameter ini a
 
 ### Convert to Number
 
-#### toParseInt()
+#### ParseInt()
 
 Untuk mengembalikan argumentnya menjadi float
 
@@ -181,3 +181,74 @@ Untuk mengembalikan argumentnya menjadi float
 
 `console.log(parseFloat("years 10")); //NaN` <br>
 `console.log(typeof parseFloat("years 10")); //number`
+
+## Function
+
+### Declaration Function
+
+Berikut format penulisannya:
+
+```
+function namaFunction(param1, param2) {
+    block code
+}
+```
+
+berikut cara memanggilnya: <br>
+`namaFunction(arg1, arg2)`
+
+berikut contohnya:
+
+```
+function hello(name) {
+  console.log(`hello ${name}`);
+}
+
+hello("john"); //hello john
+```
+
+### Expression Function
+
+berikut format penulisannya:
+
+```
+let namaFunction = function(param1, param2) {
+    block code
+}
+```
+
+berikut cara memanggilnya: <br>
+`namaFunction(arg1, arg2)` <br>
+
+berikut contohnya:
+
+```
+let morning = function (name) {
+  console.log(`good morning ${name}`);
+};
+
+morning("john"); //good morning john
+```
+
+### Arrow Function
+
+berikut format penulisannya:
+
+```
+let namaFunction = (param1, param2) {
+    block code
+}
+```
+
+berikut cara memanggilnya: <br>
+`namaFunction(arg1, arg1)`
+
+berikut contohnya:
+
+```
+let night = (name) => {
+console.log(`good night ${name}`);
+};
+
+night("john"); //goog night john
+```
