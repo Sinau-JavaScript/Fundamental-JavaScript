@@ -235,7 +235,7 @@ morning("john"); //good morning john
 berikut format penulisannya:
 
 ```
-let namaFunction = (param1, param2) {
+let namaFunction = (param1, param2) => {
     block code
 }
 ```
