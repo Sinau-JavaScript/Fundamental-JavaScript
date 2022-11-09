@@ -252,3 +252,8 @@ console.log(`good night ${name}`);
 
 night("john"); //goog night john
 ```
+
+## Object
+
+Object merupakan kumpulan nilai, yang memiliki nama. Berikut struktur object:
+<img src="img/strukturObject.png" />
