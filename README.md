@@ -256,4 +256,23 @@ night("john"); //goog night john
 ## Object
 
 Object merupakan kumpulan nilai, yang memiliki nama. Berikut struktur object:
-<img src="img/strukturObject.png" />
+<img src="object/img/strukturObject.png" />
+<br>
+
+Object dapat dibuat dengan cara Object Literal, Function declaration, constructor function (keyword new) dan object.create()
+
+### Object Literal
+
+```
+let shinobi1 = {
+  name: "Uzumaki Naruto",
+  "main jutsu": "kage bunshin no jutsu",
+  secondJutsu: "Rasengan",
+};
+
+console.log(shinobi1.name); //Uzumaki Naruto
+console.log(shinobi1["main jutsu"]); //kage bunshin no jutsu
+console.log(shinobi1.secondJutsu); //Rasengan
+```
+
+Kekurangan object literal, saat kita akan membuat lebih dari satu object meskipun propertinya sama kita harus menuliskannya satu – satu.
