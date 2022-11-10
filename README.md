@@ -276,3 +276,46 @@ console.log(shinobi1.secondJutsu); //Rasengan
 ```
 
 Kekurangan object literal, saat kita akan membuat lebih dari satu object meskipun propertinya sama kita harus menuliskannya satu – satu.
+
+### Function Declaration
+
+```
+let dataShinobi = (name, mainJutsu, secondJutsu) => {
+  let shinobi = {};
+  shinobi.name = name;
+  shinobi["main jutsu"] = mainJutsu;
+  shinobi.secondJutsu = secondJutsu;
+  return shinobi;
+};
+
+console.log(dataShinobi("Uciha Sasuke", "Chidori", "Susanoo"));
+//{ name: 'Uciha Sasuke', 'main jutsu': 'Chidori', secondJutsu: 'Susanoo'}
+
+let naruto = dataShinobi("Uzumaki Naruto", "Kage bunshin no jutsu", "Rasengan");
+console.log(naruto);
+//{ name: 'Uzumaki Naruto', 'main jutsu': 'Kage bunshin no jutsu', secondJutsu: 'Rasengan'}
+console.log(naruto.name); //Uzumaki Naruto
+console.log(naruto["main jutsu"]); //Kage bunshin no jutsu
+console.log(naruto.secondJutsu); // Rasengan
+```
+
+### Constructor Function (Keyword New)
+
+Marupakan function yang dikhususkan untuk membuat object. Biasanya nama functionnya diawali dengan huruf besar untuk membedakan dengan funtion declaration. <br><br>
+Cara membuatnya hampir sama dengan function declaration bedanya di constructor ada keyword this yang menggantikan nama object (var namaObject) serta tidak perlu mendeklarasikan variabel dan tidak perlu menambahkan return diakhir function. <br> <br>
+Cara memanggilnya juga mirip bedanya di constructor harus menggunakan keyword new sebelum nama functionnya.
+
+```
+function Akatsuki(nama, mainJutsu, secondJutsu) {
+  this.nama = nama;
+  this.mainJutsu = mainJutsu;
+  this.secondJutsu = secondJutsu;
+}
+
+let itachi = new Akatsuki("Uchiha Itachi", "Genjutsu", "Sharingan");
+console.log(itachi);
+//Akatsuki {nama: 'Uchiha Itachi', mainJutsu: 'Genjutsu', secondJutsu: 'Sharingan'}
+
+console.log(new Akatsuki("Kisame", "Doton", "Suiton"));
+//Akatsuki { nama: 'Kisame', mainJutsu: 'Doton', secondJutsu: 'Suiton' }
+```
