@@ -35,3 +35,55 @@ function Akatsuki(nama, mainJutsu, secondJutsu) {
 let itachi = new Akatsuki("Uchiha Itachi", "Genjutsu", "Sharingan");
 console.log(itachi);
 console.log(new Akatsuki("Kisame", "Doton", "Suiton"));
+
+console.log("------------ for...in Loop Object");
+const person = {
+  fname: "John",
+  lname: "Doe",
+  age: 25,
+};
+
+let text = "";
+for (let x in person) {
+  text += person[x] + " ";
+}
+console.log(text);
+
+console.log(`----------------- tescoding----------`);
+function minimumBus(a, b) {
+  let sum = 0;
+  for (let i = 0; i < b.length; i++) {
+    sum += b[i];
+  }
+  let minimumBus = sum / 4;
+  if (a !== b.length) {
+    return "Input must be equal with count of family";
+  } else {
+    return `Minimum bus require is : ${minimumBus}`;
+  }
+}
+
+console.log(minimumBus(2, [2, 2]));
+
+console.log("-------------add properties");
+const person2 = {
+  fname: "John",
+  lname: "Doe",
+  age: 25,
+};
+console.log(person2); //{ fname: 'John', lname: 'Doe', age: 25 }
+
+person2.nasionality = "english";
+console.log(person2); //{ fname: 'John', lname: 'Doe', age: 25, nasionality: 'english' }
+
+console.log("-------------Delete properties");
+const person3 = {
+  fname: "John",
+  lname: "Doe",
+  age: 25,
+  eyeColor: "blue",
+};
+console.log(person3); //{ fname: 'John', lname: 'Doe', age: 25, eyeColor: 'blue' }
+
+delete person3.eyeColor;
+console.log(person3); //{ fname: 'John', lname: 'Doe', age: 25 }

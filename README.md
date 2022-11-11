@@ -319,3 +319,59 @@ console.log(itachi);
 console.log(new Akatsuki("Kisame", "Doton", "Suiton"));
 //Akatsuki { nama: 'Kisame', mainJutsu: 'Doton', secondJutsu: 'Suiton' }
 ```
+
+### For in Loop Object
+
+For in di dalam object digunakan untuk mengurai/memetakan semua properti di dalam object. Berikut syntaxnya:
+
+```
+for (let variable in object) {
+  // code to be executed
+}
+```
+
+Berikut contoh penggunaanya:
+
+```
+const person = {
+  fname: "John",
+  lname: "Doe",
+  age: 25,
+};
+
+let text = "";
+for (let x in person) {
+  text += person[x] + " ";
+}
+console.log(text); //John Doe 25
+```
+
+### Add Properties
+
+```
+
+const person2 = {
+  fname: "John",
+  lname: "Doe",
+  age: 25,
+};
+console.log(person2); //{ fname: 'John', lname: 'Doe', age: 25 }
+
+person2.nasionality = "english";
+console.log(person2); //{ fname: 'John', lname: 'Doe', age: 25, nasionality: 'english' }
+```
+
+### Delete Properties
+
+```
+const person3 = {
+fname: "John",
+lname: "Doe",
+age: 25,
+eyeColor: "blue",
+};
+console.log(person3); //{ fname: 'John', lname: 'Doe', age: 25, eyeColor: 'blue' }
+
+delete person3.eyeColor;
+console.log(person3); //{ fname: 'John', lname: 'Doe', age: 25 }
+```
