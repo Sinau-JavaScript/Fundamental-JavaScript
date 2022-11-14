@@ -87,3 +87,6 @@ console.log(person3); //{ fname: 'John', lname: 'Doe', age: 25, eyeColor: 'blue'
 
 delete person3.eyeColor;
 console.log(person3); //{ fname: 'John', lname: 'Doe', age: 25 }
+
+delete person3["age"];
+console.log(person3); //{ fname: 'John', lname: 'Doe' }
