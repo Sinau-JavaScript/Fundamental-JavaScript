@@ -117,7 +117,7 @@ console.log(new Akatsuki("Kisame", "Doton", "Suiton"));
 //Akatsuki { nama: 'Kisame', mainJutsu: 'Doton', secondJutsu: 'Suiton' }
 ```
 
-### For in Loop Object
+## For in Loop Object
 
 For in di dalam object digunakan untuk mengurai/memetakan semua properti di dalam object. Berikut syntaxnya:
 
@@ -143,7 +143,7 @@ for (let x in person) {
 console.log(text); //John Doe 25
 ```
 
-### Add Properties
+## Add Properties
 
 ```
 
@@ -158,7 +158,27 @@ person2.nasionality = "english";
 console.log(person2); //{ fname: 'John', lname: 'Doe', age: 25, nasionality: 'english' }
 ```
 
-### Delete Properties
+## Edit Properties
+
+Berikut cara untuk perbarui property dalam object, bisa menggunakan dot (.) ataupun kurung siku ([])
+
+```
+let book = {
+  title: "harry poter",
+  author: "J K Rowling",
+  year: 2000,
+};
+
+console.log(book.title); //harry poter
+book.title = "harry poter jilid 2";
+console.log(book.title); //harry poter jilid 2
+
+console.log(book["year"]); //2000
+book["year"] = 2002;
+console.log(book["year"]); //2002
+```
+
+## Delete Properties
 
 ```
 const person3 = {
@@ -176,7 +196,7 @@ delete person3["age"];
 console.log(person3); //{ fname: 'John', lname: 'Doe' }
 ```
 
-### Nested Objects
+## Nested Objects
 
 Nilai di dalam sebuah object dapat berupa object lain
 

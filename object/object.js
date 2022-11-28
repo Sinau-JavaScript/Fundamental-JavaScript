@@ -114,6 +114,21 @@ console.log(person2); //{ fname: 'John', lname: 'Doe', age: 25 }
 person2.nasionality = "english";
 console.log(person2); //{ fname: 'John', lname: 'Doe', age: 25, nasionality: 'english' }
 
+console.log("-------------Edit properties");
+let book = {
+  title: "harry poter",
+  author: "J K Rowling",
+  year: 2000,
+};
+
+console.log(book.title); //harry poter
+book.title = "harry poter jilid 2";
+console.log(book.title); //harry poter jilid 2
+
+console.log(book["year"]); //2000
+book["year"] = 2002;
+console.log(book["year"]); //2002
+
 console.log("-------------Delete properties");
 const person3 = {
   fname: "John",
