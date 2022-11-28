@@ -1,4 +1,30 @@
-console.log("-------------membuat object---------");
+console.log("------------- Object---------");
+console.log("-------------How to make properti and method");
+
+let car = {
+  type: "Fiat",
+  model: 500,
+  color: "white",
+  start: () => {
+    console.log("start");
+  },
+  drive: () => {
+    console.log("drive");
+  },
+  stop: () => {
+    console.log("stop");
+  },
+};
+
+// properti
+console.log(car.type); //Fiat
+console.log(car.model); //500
+console.log(car.color); //white
+
+car.start(); //start
+car.drive(); //drive
+car.stop(); //stop
+
 console.log("-----------Object Literal");
 let shinobi1 = {
   name: "Uzumaki Naruto",
@@ -90,3 +116,49 @@ console.log(person3); //{ fname: 'John', lname: 'Doe', age: 25 }
 
 delete person3["age"];
 console.log(person3); //{ fname: 'John', lname: 'Doe' }
+
+console.log("---------------Nested Objects");
+myObj = {
+  name: "John",
+  age: 30,
+  cars: {
+    car1: "Ford",
+    car2: "BMW",
+    car3: "Fiat",
+  },
+};
+
+console.log(myObj.cars.car1); //Ford
+console.log(myObj.cars["car2"]); //BMW
+console.log(myObj["cars"]["car3"]); //Fiat
+let p1 = "cars";
+let p2 = "car1";
+console.log(myObj[p1][p2]); //Ford
+
+console.log("---------------------- Nested Objects dan Nested Arrays");
+let x = "";
+const myObj2 = {
+  name: "John",
+  age: 30,
+  cars: [
+    { name: "Ford", models: ["Fiesta", "Focus", "Mustang"] },
+    { name: "BMW", models: ["320", "X3", "X5"] },
+    { name: "Fiat", models: ["500", "Panda"] },
+  ],
+};
+let y = " ";
+for (let i in myObj2.cars) {
+  x += myObj2.cars[i].name + " ";
+  console.log(x);
+  for (let j in myObj2.cars[i].models) {
+    y += myObj2.cars[i].models[j] + "-";
+    console.log(y);
+  }
+}
+
+// console.log(x);
+// console.log(y);
+
+//baru sampai nested object dan array
+
+console.log("------------------------------------");
