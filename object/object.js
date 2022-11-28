@@ -25,6 +25,18 @@ car.start(); //start
 car.drive(); //drive
 car.stop(); //stop
 
+console.log("----------------- cara penggunaan this");
+let person1 = {
+  name: "Eren",
+  time: "saturday",
+  place: "Wakanda",
+  logIt: function () {
+    console.log(`${this.name} visited ${this.place} on ${this.time}`);
+  },
+};
+
+person1.logIt(); //Eren visited Wakanda on saturday
+
 console.log("-----------Object Literal");
 let shinobi1 = {
   name: "Uzumaki Naruto",

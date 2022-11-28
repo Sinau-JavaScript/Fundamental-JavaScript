@@ -39,6 +39,23 @@ car.drive(); //drive
 car.stop(); //stop
 ```
 
+## Penggunaan key word this
+
+Keyword dis tidak bisa digunakan untuk arrow function, berikut contoh penggunaanya untuk object:
+
+```
+let person1 = {
+  name: "Eren",
+  time: "saturday",
+  place: "Wakanda",
+  logIt: function () {
+    console.log(`${this.name} visited ${this.place} on ${this.time}`);
+  },
+};
+
+person1.logIt(); //Eren visited Wakanda on saturday
+```
+
 Object dapat dibuat dengan cara Object Literal, Function declaration, constructor function (keyword new) dan object.create()
 
 ### Object Literal
