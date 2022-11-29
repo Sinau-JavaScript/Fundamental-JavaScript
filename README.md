@@ -180,19 +180,50 @@ for (let x in person) {
 console.log(text); //John Doe 25
 ```
 
+Berikut contoh lain penggunaan for in
+
+```
+let numObj = { a: 1, b: 2, c: 3, d: 4 };
+console.log(numObj);
+
+for (properti in numObj) {
+  console.log(`Obj.${properti}= ${numObj[properti]}`);
+}
+
+// Obj.a = 1;
+// Obj.b = 2;
+// Obj.c = 3;
+// Obj.d = 4;
+```
+
+```
+let person8 = { name: "John", email: "John@mail.com", age: 25, active: true };
+
+let txt = "";
+for (let prop in person8) {
+  txt += `${prop} =  ${person8[prop]} \n`;
+}
+console.log(txt);
+// name =  John
+// email =  John@mail.com
+// age =  25
+// active =  true
+```
+
 ## Menambahkan Properti
 
 ```
 
 const person2 = {
-  fname: "John",
-  lname: "Doe",
-  age: 25,
+fname: "John",
+lname: "Doe",
+age: 25,
 };
 console.log(person2); //{ fname: 'John', lname: 'Doe', age: 25 }
 
 person2.nasionality = "english";
 console.log(person2); //{ fname: 'John', lname: 'Doe', age: 25, nasionality: 'english' }
+
 ```
 
 ## Check Properti
@@ -200,17 +231,19 @@ console.log(person2); //{ fname: 'John', lname: 'Doe', age: 25, nasionality: 'en
 Kita bisa memeriksa apakah properti yang kita cari tersebut ada atau tidak di dalah suatu object menggunakan operator `in`, jika ada operator ini akan mengembalikan true jika tidak ad operator ini akan mengembalikan false
 
 ```
+
 let makeUser = (name, age) => {
-  return {
-    name: name,
-    age: age,
-  };
+return {
+name: name,
+age: age,
+};
 };
 
 let user1 = makeUser("john", 30);
 console.log(user1); // { name: 'john', age: 30 }
 console.log("age" in user1); //true
 console.log("address" in user1); // false
+
 ```
 
 ## Edit Properti
@@ -218,10 +251,11 @@ console.log("address" in user1); // false
 Berikut cara untuk perbarui property dalam object, bisa menggunakan dot (.) ataupun kurung siku ([])
 
 ```
+
 let book = {
-  title: "harry poter",
-  author: "J K Rowling",
-  year: 2000,
+title: "harry poter",
+author: "J K Rowling",
+year: 2000,
 };
 
 console.log(book.title); //harry poter
@@ -231,11 +265,13 @@ console.log(book.title); //harry poter jilid 2
 console.log(book["year"]); //2000
 book["year"] = 2002;
 console.log(book["year"]); //2002
+
 ```
 
 ## Menghapus Properti
 
 ```
+
 const person3 = {
 fname: "John",
 lname: "Doe",
@@ -249,6 +285,7 @@ console.log(person3); //{ fname: 'John', lname: 'Doe', age: 25 }
 
 delete person3["age"];
 console.log(person3); //{ fname: 'John', lname: 'Doe' }
+
 ```
 
 ## Nested Objects
@@ -256,31 +293,37 @@ console.log(person3); //{ fname: 'John', lname: 'Doe' }
 Nilai di dalam sebuah object dapat berupa object lain
 
 ```
+
 myObj = {
-  name: "John",
-  age: 30,
-  cars: {
-    car1: "Ford",
-    car2: "BMW",
-    car3: "Fiat",
-  },
+name: "John",
+age: 30,
+cars: {
+car1: "Ford",
+car2: "BMW",
+car3: "Fiat",
+},
 };
+
 ```
 
 Kita dapat mengaksesnya menggunakan menggunakan notasi dot atau braket.
 
 ```
+
 console.log(myObj.cars.car1); //Ford
 console.log(myObj.cars["car2"]); //BMW
 console.log(myObj["cars"]["car3"]); //Fiat
+
 ```
 
 Atau bisa juga dengan cara ini
 
 ```
+
 let p1 = "cars";
 let p2 = "car1";
 console.log(myObj[p1][p2]); //Ford
+
 ```
 
 ## Konversi Ke Array
@@ -288,10 +331,12 @@ console.log(myObj[p1][p2]); //Ford
 Properti dalam object dapat dikonversi menjadi array
 
 ```
+
 let person5 = { name: "utsman", age: 30, address: "ta'if" };
 let myArr = Object.values(person5);
 
 console.log(myArr); //[ 'utsman', 30, "ta'if" ]
+
 ```
 
 ## JSON.stringify()
@@ -299,9 +344,11 @@ console.log(myArr); //[ 'utsman', 30, "ta'if" ]
 Dengan menggunakan JSON.stringify() semua property dalam object dapat ditampilkan dalam bentuk string
 
 ```
+
 let person6 = { name: "Goku", age: 27, address: "wakanda" };
 let str = JSON.stringify(person6);
 console.log(str); //{"name":"Goku","age":27,"address":"wakanda"}
+
 ```
 
 ## JSON.stringify Dates
@@ -309,9 +356,11 @@ console.log(str); //{"name":"Goku","age":27,"address":"wakanda"}
 JSON.stringify dapat digunakan untuk mengkonversi tanggal menjadi string
 
 ```
+
 let person7 = { name: "Usop", today: new Date() };
 
 console.log(JSON.stringify(person7)); //{"name":"Usop","today":"2022-11-29T15:39:27.286Z"}
+
 ```
 
 ## Stringify Functions
@@ -319,25 +368,33 @@ console.log(JSON.stringify(person7)); //{"name":"Usop","today":"2022-11-29T15:39
 JSON.stringify tidak akan mengubah function menjadi string, hasilnya akan seperti ini:
 
 ```
+
 let shinobi = {
-  name: "Sikamaru",
-  age: 28,
-  jutsu: function () {
-    return "kagemane no jutsu";
-  },
+name: "Sikamaru",
+age: 28,
+jutsu: function () {
+return "kagemane no jutsu";
+},
 };
 
 console.log(JSON.stringify(shinobi)); //{"name":"Sikamaru","age":28}
+
 ```
 
 Tetapi ini dapat diakali dengan cara mengubah function tersebut menjadi string menggunakan method toString()
 
 ```
+
 shinobi.jutsu = shinobi.jutsu.toString();
 
 console.log(JSON.stringify(shinobi)); //{"name":"Sikamaru","age":28,"jutsu":"function () {\n return \"kagemane no jutsu\";\n }"}
+
 ```
 
 ## Pilar OOP
 
 [referensinya disini](https://medium.com/codeacademia/belajar-fundamental-opp-dengan-javascript-c1b721677ce9) lagi males buat dokumentasi
+
+```
+
+```

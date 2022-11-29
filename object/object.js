@@ -87,6 +87,30 @@ for (let x in person) {
 }
 console.log(text);
 
+let numObj = { a: 1, b: 2, c: 3, d: 4 };
+console.log(numObj);
+
+for (properti in numObj) {
+  console.log(`Obj.${properti}= ${numObj[properti]}`);
+}
+
+// Obj.a = 1;
+// Obj.b = 2;
+// Obj.c = 3;
+// Obj.d = 4;
+
+let person8 = { name: "John", email: "John@mail.com", age: 25, active: true };
+
+let txt = "";
+for (let prop in person8) {
+  txt += `${prop} =  ${person8[prop]} \n`;
+}
+console.log(txt);
+// name =  John
+// email =  John@mail.com
+// age =  25
+// active =  true
+
 console.log(`----------------- tescoding----------`);
 function minimumBus(a, b) {
   let sum = 0;
@@ -239,3 +263,5 @@ console.log(JSON.stringify(shinobi)); //{"name":"Sikamaru","age":28}
 shinobi.jutsu = shinobi.jutsu.toString();
 
 console.log(JSON.stringify(shinobi)); //{"name":"Sikamaru","age":28,"jutsu":"function () {\n    return \"kagemane no jutsu\";\n  }"}
+
+console.log("-----------------------------");
