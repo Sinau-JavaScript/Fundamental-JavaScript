@@ -283,6 +283,17 @@ let p2 = "car1";
 console.log(myObj[p1][p2]); //Ford
 ```
 
+## Konversi Ke Array
+
+Properti dalam object dapat dikonversi menjadi array
+
+```
+let person5 = { name: "utsman", age: 30, address: "ta'if" };
+let myArr = Object.values(person5);
+
+console.log(myArr); //[ 'utsman', 30, "ta'if" ]
+```
+
 ## Pilar OOP
 
 [referensinya disini](https://medium.com/codeacademia/belajar-fundamental-opp-dengan-javascript-c1b721677ce9) lagi males buat dokumentasi

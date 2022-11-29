@@ -195,17 +195,24 @@ const myObj2 = {
     { name: "Fiat", models: ["500", "Panda"] },
   ],
 };
+
 let y = " ";
 for (let i in myObj2.cars) {
   x += myObj2.cars[i].name + " ";
-  console.log(x);
+  // console.log(x);
   for (let j in myObj2.cars[i].models) {
     y += myObj2.cars[i].models[j] + "-";
-    console.log(y);
+    // console.log(y);
   }
 }
 
-// console.log(x);
-// console.log(y);
+console.log(x);
+console.log(y);
 
 //baru sampai nested object dan array
+console.log("-----------------Convert to Array");
+let person5 = { name: "utsman", age: 30, address: "ta'if" };
+let myArr = Object.values(person5);
+console.log(myArr); //[ 'utsman', 30, "ta'if" ]
+
+console.log("---------------------------------");
