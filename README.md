@@ -294,6 +294,50 @@ let myArr = Object.values(person5);
 console.log(myArr); //[ 'utsman', 30, "ta'if" ]
 ```
 
+## JSON.stringify()
+
+Dengan menggunakan JSON.stringify() semua property dalam object dapat ditampilkan dalam bentuk string
+
+```
+let person6 = { name: "Goku", age: 27, address: "wakanda" };
+let str = JSON.stringify(person6);
+console.log(str); //{"name":"Goku","age":27,"address":"wakanda"}
+```
+
+## JSON.stringify Dates
+
+JSON.stringify dapat digunakan untuk mengkonversi tanggal menjadi string
+
+```
+let person7 = { name: "Usop", today: new Date() };
+
+console.log(JSON.stringify(person7)); //{"name":"Usop","today":"2022-11-29T15:39:27.286Z"}
+```
+
+## Stringify Functions
+
+JSON.stringify tidak akan mengubah function menjadi string, hasilnya akan seperti ini:
+
+```
+let shinobi = {
+  name: "Sikamaru",
+  age: 28,
+  jutsu: function () {
+    return "kagemane no jutsu";
+  },
+};
+
+console.log(JSON.stringify(shinobi)); //{"name":"Sikamaru","age":28}
+```
+
+Tetapi ini dapat diakali dengan cara mengubah function tersebut menjadi string menggunakan method toString()
+
+```
+shinobi.jutsu = shinobi.jutsu.toString();
+
+console.log(JSON.stringify(shinobi)); //{"name":"Sikamaru","age":28,"jutsu":"function () {\n return \"kagemane no jutsu\";\n }"}
+```
+
 ## Pilar OOP
 
 [referensinya disini](https://medium.com/codeacademia/belajar-fundamental-opp-dengan-javascript-c1b721677ce9) lagi males buat dokumentasi

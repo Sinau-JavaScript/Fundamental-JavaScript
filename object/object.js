@@ -215,4 +215,27 @@ let person5 = { name: "utsman", age: 30, address: "ta'if" };
 let myArr = Object.values(person5);
 console.log(myArr); //[ 'utsman', 30, "ta'if" ]
 
-console.log("---------------------------------");
+console.log("---------------JSON.stringify()");
+let person6 = { name: "Goku", age: 27, address: "wakanda" };
+let str = JSON.stringify(person6);
+console.log(str); //{"name":"Goku","age":27,"address":"wakanda"}
+
+console.log("---------------Stringify Date");
+let person7 = { name: "Usop", today: new Date() };
+
+console.log(JSON.stringify(person7)); //{"name":"Usop","today":"2022-11-29T15:39:27.286Z"}
+
+console.log("---------------Stringify Functions");
+let shinobi = {
+  name: "Sikamaru",
+  age: 28,
+  jutsu: function () {
+    return "kagemane no jutsu";
+  },
+};
+
+console.log(JSON.stringify(shinobi)); //{"name":"Sikamaru","age":28}
+
+shinobi.jutsu = shinobi.jutsu.toString();
+
+console.log(JSON.stringify(shinobi)); //{"name":"Sikamaru","age":28,"jutsu":"function () {\n    return \"kagemane no jutsu\";\n  }"}
