@@ -1,10 +1,6 @@
 # Object
 
-Object merupakan kumpulan nilai, yang memiliki nama. Berikut struktur object:
-<img src="object/img/strukturObject.png" />
-<br>
-
-Berikut cara penulisan Properti dan Method dalam object:
+Object merupakan kumpulan nilai, yang memiliki nama. Berikut cara penulisan Properti dan Method dalam object:
 
 ```
 let car = {
@@ -39,9 +35,34 @@ car.drive(); //drive
 car.stop(); //stop
 ```
 
-## Penggunaan key word this
+## Cara Memanggil (acceess) Object
 
-Keyword dis tidak bisa digunakan untuk arrow function, berikut contoh penggunaanya untuk object:
+Properti di dalam Object dapat dipanggil menggunakn dot(.) atau kurung siku([]). Untuk properi yang nama key-nya lebih dari satu kata hanya dapat diakses menggunakan kurung siku:
+
+```
+let person4 = {
+  "full name": "Eren Jeager",
+  nickName: "Eren",
+  logIt: function () {
+    console.log(`${this.name} visited ${this.place} on ${this.time}`);
+  },
+};
+
+console.log(person4.nickName); //Eren
+console.log(person4["full name"]); //Eren Jeager
+person1.logIt(); //Eren visited Wakanda on saturday
+
+```
+
+Seperti yang terlihat diatas harus kita perhatikan untuk memanggil meethod dalam objeckt harus ditambahkan tanda kurung (), seperti berikut:
+
+```
+person1.logIt(); //Eren visited Wakanda on saturday
+```
+
+## Penggunaan key word This
+
+This adalah sebuah keyword khusus yang merujuk pada pada objek pemiliknya. Keyword dis tidak bisa digunakan untuk arrow function, berikut contoh penggunaanya untuk object:
 
 ```
 let person1 = {
@@ -96,6 +117,22 @@ console.log(naruto["main jutsu"]); //Kage bunshin no jutsu
 console.log(naruto.secondJutsu); // Rasengan
 ```
 
+Atau bisa juga dibuat seperti ini
+
+```
+let makeUser = (name, age) => {
+  return {
+    name: name,
+    age: age,
+  };
+};
+
+let user1 = makeUser("john", 30);
+console.log(user1); // { name: 'john', age: 30 }
+console.log(user1.name); //john
+console.log(user1.age); // 30
+```
+
 ### Constructor Function (Keyword New)
 
 Marupakan function yang dikhususkan untuk membuat object. Biasanya nama functionnya diawali dengan huruf besar untuk membedakan dengan funtion declaration. <br><br>
@@ -143,7 +180,7 @@ for (let x in person) {
 console.log(text); //John Doe 25
 ```
 
-## Add Properties
+## Menambahkan Properti
 
 ```
 
@@ -158,7 +195,25 @@ person2.nasionality = "english";
 console.log(person2); //{ fname: 'John', lname: 'Doe', age: 25, nasionality: 'english' }
 ```
 
-## Edit Properties
+## Check Properti
+
+Kita bisa memeriksa apakah properti yang kita cari tersebut ada atau tidak di dalah suatu object menggunakan operator `in`, jika ada operator ini akan mengembalikan true jika tidak ad operator ini akan mengembalikan false
+
+```
+let makeUser = (name, age) => {
+  return {
+    name: name,
+    age: age,
+  };
+};
+
+let user1 = makeUser("john", 30);
+console.log(user1); // { name: 'john', age: 30 }
+console.log("age" in user1); //true
+console.log("address" in user1); // false
+```
+
+## Edit Properti
 
 Berikut cara untuk perbarui property dalam object, bisa menggunakan dot (.) ataupun kurung siku ([])
 
@@ -178,7 +233,7 @@ book["year"] = 2002;
 console.log(book["year"]); //2002
 ```
 
-## Delete Properties
+## Menghapus Properti
 
 ```
 const person3 = {
@@ -227,3 +282,7 @@ let p1 = "cars";
 let p2 = "car1";
 console.log(myObj[p1][p2]); //Ford
 ```
+
+## Pilar OOP
+
+[referensinya disini](https://medium.com/codeacademia/belajar-fundamental-opp-dengan-javascript-c1b721677ce9) lagi males buat dokumentasi

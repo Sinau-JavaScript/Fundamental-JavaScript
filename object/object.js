@@ -129,6 +129,15 @@ console.log(book["year"]); //2000
 book["year"] = 2002;
 console.log(book["year"]); //2002
 
+console.log("-------------Access properties");
+let person4 = {
+  "full name": "Eren Jeager",
+  nickName: "Eren",
+};
+
+console.log(person4.nickName); //Eren
+console.log(person4["full name"]); //Eren Jeager
+
 console.log("-------------Delete properties");
 const person3 = {
   fname: "John",
@@ -143,6 +152,19 @@ console.log(person3); //{ fname: 'John', lname: 'Doe', age: 25 }
 
 delete person3["age"];
 console.log(person3); //{ fname: 'John', lname: 'Doe' }
+
+console.log("----------------- Check property");
+let makeUser = (name, age) => {
+  return {
+    name: name,
+    age: age,
+  };
+};
+
+let user1 = makeUser("john", 30);
+console.log(user1); // { name: 'john', age: 30 }
+console.log("age" in user1); //true
+console.log("address" in user1); // false
 
 console.log("---------------Nested Objects");
 myObj = {
@@ -187,5 +209,3 @@ for (let i in myObj2.cars) {
 // console.log(y);
 
 //baru sampai nested object dan array
-
-console.log("------------------------------------");
