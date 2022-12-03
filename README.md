@@ -370,11 +370,11 @@ JSON.stringify tidak akan mengubah function menjadi string, hasilnya akan sepert
 ```
 
 let shinobi = {
-name: "Sikamaru",
-age: 28,
-jutsu: function () {
-return "kagemane no jutsu";
-},
+  name: "Sikamaru",
+  age: 28,
+  jutsu: function () {
+  return "kagemane no jutsu";
+  },
 };
 
 console.log(JSON.stringify(shinobi)); //{"name":"Sikamaru","age":28}
@@ -387,7 +387,8 @@ Tetapi ini dapat diakali dengan cara mengubah function tersebut menjadi string m
 
 shinobi.jutsu = shinobi.jutsu.toString();
 
-console.log(JSON.stringify(shinobi)); //{"name":"Sikamaru","age":28,"jutsu":"function () {\n return \"kagemane no jutsu\";\n }"}
+console.log(JSON.stringify(shinobi));
+//{"name":"Sikamaru","age":28,"jutsu":"function () {\n return \"kagemane no jutsu\";\n }"}
 
 ```
 
@@ -395,6 +396,43 @@ console.log(JSON.stringify(shinobi)); //{"name":"Sikamaru","age":28,"jutsu":"fun
 
 [referensinya disini](https://medium.com/codeacademia/belajar-fundamental-opp-dengan-javascript-c1b721677ce9) lagi males buat dokumentasi
 
+## Accessors (Getters and Setters)
+
+Accessors adalah fungsi untuk mendapatkan dan mengatur sebuah nilai, tapi mereka mirip seperti properti biasa pada kode eksternal.
+
+### Getter
+
+Digunanakan untuk mendapatkan value dari properti lain
+
+```
+let person9 = {
+  name: "John",
+  age: 27,
+  language: "English",
+  get lang() {
+    return this.language;
+  },
+};
+
+console.log(person9.lang); //English
 ```
 
+Dari luar, properti accessor tampak seperti variabel pada umumnya. Itulah ide dari properti accesor. Kita tidak memanggil person9.lang melaui fungsi, Namun kita membacanya secara biasa: properti getter berjalan di belakang layar.
+
+### Setter
+
+Digunakan untuk menetapkan / memperbarui nilai suatu properti dalam objek
+
+```
+let org2 = {
+  fname: "John",
+  lname: "Doe",
+  language: "Java",
+  set lang(value) {
+    this.language = value;
+  },
+};
+
+org2.lang = "goLang";
+console.log(org2.language);
 ```

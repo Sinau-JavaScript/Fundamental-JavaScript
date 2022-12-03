@@ -264,4 +264,39 @@ shinobi.jutsu = shinobi.jutsu.toString();
 
 console.log(JSON.stringify(shinobi)); //{"name":"Sikamaru","age":28,"jutsu":"function () {\n    return \"kagemane no jutsu\";\n  }"}
 
-console.log("-----------------------------");
+console.log("---------------Getter");
+let person9 = {
+  name: "John",
+  age: 27,
+  language: "English",
+  get lang() {
+    return this.language;
+  },
+};
+
+console.log(person9.lang); //English
+
+let org = {
+  fname: "John",
+  lname: "Doe",
+  get fulName() {
+    return `${this.fname} ${this.lname}`;
+  },
+};
+
+console.log(org.fulName); //John Doe
+
+console.log("-----------------Setter");
+let org2 = {
+  fname: "John",
+  lname: "Doe",
+  language: "Java",
+  set lang(value) {
+    this.language = value;
+  },
+};
+
+org2.lang = "goLang";
+console.log(org2.language);
+
+console.log("----------------------------");
