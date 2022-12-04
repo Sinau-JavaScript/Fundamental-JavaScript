@@ -299,4 +299,27 @@ let org2 = {
 org2.lang = "goLang";
 console.log(org2.language);
 
-console.log("----------------------------");
+console.log("--------------Prototypes untuk property");
+let Akatsuki2 = function (name, age) {
+  this.name = name;
+  this.age = age;
+};
+
+let obito = new Akatsuki2("obito", 30);
+console.log(obito); //Akatsuki2 { name: 'obito', age: 30 }
+Akatsuki2.prototype.nasionality = "Konoha";
+console.log(obito); //Akatsuki2 { name: 'obito', age: 30 }
+console.log(obito.nasionality); //Konoha
+
+console.log("--------------- propertypes method");
+let Akatsuki3 = function (name, age) {
+  this.name = name;
+  this.age = age;
+};
+
+let ucihaItachi = new Akatsuki3("Uchiha Itachi", 27);
+console.log(ucihaItachi); //Akatsuki3 { name: 'Uchiha Itachi', age: 27 }
+Akatsuki3.prototype.showNameAge = function () {
+  console.log(`His namae is ${this.name} and his age is ${this.age}`);
+};
+ucihaItachi.showNameAge(); //His namae is Uchiha Itachi and his age is 27
