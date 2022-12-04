@@ -471,3 +471,57 @@ Akatsuki3.prototype.showNameAge = function () {
 };
 ucihaItachi.showNameAge(); //His namae is Uchiha Itachi and his age is 27
 ```
+
+## Iterables
+
+### Iterables pada String
+
+```
+const str2 = "productive";
+for (let prop of str2) {
+  console.log(prop);
+}
+// p
+// r
+// o
+// d
+// u
+// c
+// t
+// i
+// v
+// e
+```
+
+### Iterables untuk Array
+
+```
+const letter = ["a", "b", "c"];
+for (let prop of letter) {
+  console.log(prop);
+}
+// a
+// b
+// c
+```
+
+### Home Made Iterable
+
+Iterable ini mengembalikan value tanpa akhir setiap kali `next()` dipanggil:
+
+```
+function myNumber() {
+  let x = 0;
+  return {
+    next: function () {
+      x += 10;
+      return { value: x, done: false };
+    },
+  };
+}
+const n = myNumber();
+console.log(n.next()); //{ value: 10, done: false }
+console.log(n.next().value); //20
+console.log(n.next().value); //30
+console.log(n.next().value); //40
+```

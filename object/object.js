@@ -323,3 +323,64 @@ Akatsuki3.prototype.showNameAge = function () {
   console.log(`His namae is ${this.name} and his age is ${this.age}`);
 };
 ucihaItachi.showNameAge(); //His namae is Uchiha Itachi and his age is 27
+
+console.log("-----------Iterables pada String");
+const str2 = "productive";
+for (let prop of str2) {
+  console.log(prop);
+}
+// p
+// r
+// o
+// d
+// u
+// c
+// t
+// i
+// v
+// e
+
+console.log("-----------Iterables pada Array");
+const letter = ["a", "b", "c"];
+for (let prop of letter) {
+  console.log(prop);
+}
+// a
+// b
+// c
+
+console.log("-------------Home Made Iterable");
+function myNumber() {
+  let x = 0;
+  return {
+    next: function () {
+      x += 10;
+      return { value: x, done: false };
+    },
+  };
+}
+const n = myNumber();
+console.log(n.next()); //{ value: 10, done: false }
+console.log(n.next().value); //20
+console.log(n.next().value); //30
+console.log(n.next().value); //40
+
+console.log("-----------------------------------");
+let myNumbers = {};
+myNumbers[Symbol.iterator] = function () {
+  let n = 0;
+  done = false;
+  return {
+    next() {
+      n += 10;
+      if (n == 100) {
+        done = true;
+      }
+      return { value: n, done: done };
+    },
+  };
+};
+
+for (const num of myNumbers) {
+  console.log(num);
+}
