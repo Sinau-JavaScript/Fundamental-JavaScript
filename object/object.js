@@ -365,7 +365,7 @@ console.log(n.next().value); //20
 console.log(n.next().value); //30
 console.log(n.next().value); //40
 
-console.log("-----------------------------------");
+console.log("---------------Home Made Iterable menggunakan for of");
 let myNumbers = {};
 myNumbers[Symbol.iterator] = function () {
   let n = 0;
@@ -384,3 +384,14 @@ myNumbers[Symbol.iterator] = function () {
 for (const num of myNumbers) {
   console.log(num);
 }
+// 10
+// 20
+// 30
+// 40
+// 50
+// 60
+// 70
+// 80
+// 90
+
+console.log("-----------------------------------");
