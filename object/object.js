@@ -738,3 +738,17 @@ console.log(txt5);
 // 2  = BigMom
 // 3  = Kaido
 // 4  = Shanks
+
+console.log("------------------------- entries() method ");
+let newYonkou = new Map([
+  [1, "Shanks"],
+  [2, "Buggy"],
+  [3, "Teach"],
+  [3, "Luffy"],
+]);
+
+let txt6 = "";
+for (const x of newYonkou.entries()) {
+  txt6 += `${x} \n`;
+}
+console.log(txt6);

@@ -994,3 +994,22 @@ console.log(txt5);
 // 3  = Kaido
 // 4  = Shanks
 ```
+
+### entries() method
+
+Metode entri() mengembalikan objek iterator dengan [key,values] di Peta:
+
+```
+let newYonkou = new Map([
+  [1, "Shanks"],
+  [2, "Buggy"],
+  [3, "Teach"],
+  [3, "Luffy"],
+]);
+
+let txt6 = "";
+for (const x of newYonkou.entries()) {
+  txt6 += `${x} \n`;
+}
+console.log(txt6);
+```
