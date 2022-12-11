@@ -1013,3 +1013,32 @@ for (const x of newYonkou.entries()) {
 }
 console.log(txt6);
 ```
+
+### keys() method
+
+Metode keys() mengembalikan objek iterator dengan key di Map:
+
+```
+let hokage = new Map([
+  [1, "Hashirama"],
+  [2, "Sarutobi"],
+  [3, "Minato"],
+  [4, "Minato"],
+  [5, "Tsunade"],
+  [6, "Kakashi"],
+  [7, "Naruto"],
+]);
+
+let txt7 = "";
+for (const x of hokage.keys()) {
+  txt7 += `${x} \n`;
+}
+console.log(txt7);
+// 1
+// 2
+// 3
+// 4
+// 5
+// 6
+// 7
+```
