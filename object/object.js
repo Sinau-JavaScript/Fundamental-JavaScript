@@ -719,3 +719,22 @@ let mugiwaraTeam = new Map([
 
 console.log(mugiwaraTeam.has(3)); //true
 console.log(mugiwaraTeam.has(6)); //false
+
+console.log("------------------- forEach ");
+let yonkou = new Map([
+  [1, "Shirohige"],
+  [2, "BigMom"],
+  [3, "Kaido"],
+  [4, "Shanks"],
+]);
+
+let txt5 = "";
+yonkou.forEach(function (value, key) {
+  txt5 += `${key}  = ${value} \n`;
+});
+
+console.log(txt5);
+// 1  = Shirohige
+// 2  = BigMom
+// 3  = Kaido
+// 4  = Shanks
