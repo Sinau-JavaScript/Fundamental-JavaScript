@@ -724,6 +724,8 @@ console.log(nums5.has(8)); //false
 
 ### Contoh Kasus Yang Dipecahkan Menggunakan Set
 
+[ref](https://code.tutsplus.com/id/tutorials/understanding-sets-with-javascript--cms-29789)
+
 #### Union
 
 Yaitu mengelompokkan nilai diantara dua kelompok dengan mengabaikan duplikat pada nilai yang terdapat di kedua kelompok tersebut. Seperti contoh berikut mengumpulkan semua value yang terdapat di kelompok engineering dan freelancers berikut
@@ -857,4 +859,36 @@ console.log(backEnd3);
 let difference = new Set([...frontEnd3].filter((x) => !backEnd3.has(x)));
 console.log(difference);
 //Set(4) { 'eren', 'itachi', 'lee', 'sikamaru' }
+```
+
+## Map()
+
+Map adalah sebuah koleksi dari elemen-elemen yang ada pada JavaScript yang tiap elemen ini disimpan sebagai pasangan KV (key, value). Hal ini memungkinkan untuk objek pada JavaScript Map untuk menahan objek dan nilai primitif sebagai kunci atau nilainya.
+
+### Membuat Map()
+
+Membuat map dapat dilakukan dengan 2 cara yaitu menggunakan new Map() dan Map.Set().
+
+#### new Map()
+
+let fruits = new Map([
+["apples", 500],
+["bananas", 300],
+["oranges", 200],
+]);
+
+console.log(fruits);
+//Map(3) { 'apples' => 500, 'bananas' => 300, 'oranges' => 200 }
+console.log(fruits.get("apples")); //500
+
+#### Map.set()
+
+```
+let fruits2 = new Map();
+fruits2.set("apple", 500);
+fruits2.set("banana", 300);
+fruits2.set("orange", 200);
+console.log(fruits2);
+//Map(3) { 'apple' => 500, 'banana' => 300, 'orange' => 200 }
+console.log(fruits2.get("apple")); //500
 ```

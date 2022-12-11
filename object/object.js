@@ -651,3 +651,24 @@ console.log(backEnd3);
 let difference = new Set([...frontEnd3].filter((x) => !backEnd3.has(x)));
 console.log(difference);
 //Set(4) { 'eren', 'itachi', 'lee', 'sikamaru' }
+
+console.log("---------------- Map () -----------------");
+console.log("------------------ new Map()");
+let fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200],
+]);
+
+console.log(fruits);
+//Map(3) { 'apples' => 500, 'bananas' => 300, 'oranges' => 200 }
+console.log(fruits.get("apples")); //500
+
+console.log("------------------ Map.set()");
+let fruits2 = new Map();
+fruits2.set("apple", 500);
+fruits2.set("banana", 300);
+fruits2.set("orange", 200);
+console.log(fruits2);
+//Map(3) { 'apple' => 500, 'banana' => 300, 'orange' => 200 }
+console.log(fruits2.get("apple")); //500
