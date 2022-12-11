@@ -892,3 +892,31 @@ console.log(fruits2);
 //Map(3) { 'apple' => 500, 'banana' => 300, 'orange' => 200 }
 console.log(fruits2.get("apple")); //500
 ```
+
+### Method get()
+
+method get digunakan untuk mereturn value dari key pada map.
+
+```
+let fruits2 = new Map();
+fruits2.set("apple", 500);
+fruits2.set("banana", 300);
+fruits2.set("orange", 200);
+
+console.log(fruits2.get("apple")); //500
+```
+
+### Method Size
+
+Method size digunakan untuk mereturn jumlah elemen dalam Map
+
+```
+let seventhTeam = new Map([
+  [1, "Naruto"],
+  [2, "Sasuke"],
+  [3, "Sakura"],
+]);
+console.log(seventhTeam);
+//Map(3) { 1 => 'Naruto', 2 => 'Sasuke', 3 => 'Sakura' }
+console.log(seventhTeam.size); //3
+```

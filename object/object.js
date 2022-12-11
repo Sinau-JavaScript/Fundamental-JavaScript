@@ -672,3 +672,13 @@ fruits2.set("orange", 200);
 console.log(fruits2);
 //Map(3) { 'apple' => 500, 'banana' => 300, 'orange' => 200 }
 console.log(fruits2.get("apple")); //500
+
+console.log("---------------- size method ");
+let seventhTeam = new Map([
+  [1, "Naruto"],
+  [2, "Sasuke"],
+  [3, "Sakura"],
+]);
+console.log(seventhTeam);
+//Map(3) { 1 => 'Naruto', 2 => 'Sasuke', 3 => 'Sakura' }
+console.log(seventhTeam.size); //3
