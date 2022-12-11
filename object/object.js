@@ -682,3 +682,16 @@ let seventhTeam = new Map([
 console.log(seventhTeam);
 //Map(3) { 1 => 'Naruto', 2 => 'Sasuke', 3 => 'Sakura' }
 console.log(seventhTeam.size); //3
+
+console.log("---------------- delete() method");
+let akatsuki = new Map([
+  [1, "Itachi"],
+  [2, "Pain"],
+  [3, "Hidan"],
+]);
+
+console.log(akatsuki);
+// Map(3) { 1 => 'Itachi', 2 => 'Pain', 3 => 'Hidan' }
+akatsuki.delete(2);
+console.log(akatsuki);
+// Map(2) { 1 => 'Itachi', 3 => 'Hidan' }
