@@ -695,3 +695,27 @@ console.log(akatsuki);
 akatsuki.delete(2);
 console.log(akatsuki);
 // Map(2) { 1 => 'Itachi', 3 => 'Hidan' }
+
+console.log("-------------------- clear() method");
+let army = new Map([
+  [1, "eren"],
+  [2, "mikasa"],
+  [3, "armin"],
+]);
+
+console.log(army);
+//Map(3) { 1 => 'eren', 2 => 'mikasa', 3 => 'armin' }
+army.clear();
+console.log(army);
+//Map(0) {}
+
+console.log("------------------- has() method");
+let mugiwaraTeam = new Map([
+  [1, "Luffy"],
+  [2, "Zoro"],
+  [3, "Nami"],
+  [4, "Usop"],
+]);
+
+console.log(mugiwaraTeam.has(3)); //true
+console.log(mugiwaraTeam.has(6)); //false

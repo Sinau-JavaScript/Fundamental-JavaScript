@@ -938,3 +938,37 @@ akatsuki.delete(2);
 console.log(akatsuki);
 // Map(2) { 1 => 'Itachi', 3 => 'Hidan' }
 ```
+
+### clear() method
+
+Digunakan untuk menghapus semua elemen di dalam map
+
+```
+let army = new Map([
+  [1, "eren"],
+  [2, "mikasa"],
+  [3, "armin"],
+]);
+
+console.log(army);
+//Map(3) { 1 => 'eren', 2 => 'mikasa', 3 => 'armin' }
+army.clear();
+console.log(army);
+//Map(0) {}
+```
+
+### has() method
+
+Digunakan untuk memeriksa apakah key yang dicari ada atau tidak di dalam map, jika ada akan mereturn true dan akan mereturn false jika tidak ada
+
+```
+let mugiwaraTeam = new Map([
+  [1, "Luffy"],
+  [2, "Zoro"],
+  [3, "Nami"],
+  [4, "Usop"],
+]);
+
+console.log(mugiwaraTeam.has(3)); //true
+console.log(mugiwaraTeam.has(6)); //false
+```
