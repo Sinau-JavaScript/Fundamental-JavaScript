@@ -800,3 +800,20 @@ console.log(txt8);
 // Tsunade
 // Kakashi
 // Naruto
+
+console.log("---------------- Object as Key");
+// Create Objects
+const apples = { name: "Apples" };
+const bananas = { name: "Bananas" };
+const oranges = { name: "Oranges" };
+
+// Create a Map
+const fruits3 = new Map();
+
+// Add the Objects to the Map
+fruits3.set(apples, 500);
+fruits3.set(bananas, 300);
+fruits3.set(oranges, 200);
+
+console.log(fruits3.get(apples)); //500
+console.log(fruits3.get(bananas)); //300

@@ -1071,3 +1071,26 @@ console.log(txt8);
 // Kakashi
 // Naruto
 ```
+
+### Object as Key
+
+Kita bisa membuat sebuah object dijadikan key dalam Map.
+
+```
+Key");
+// Create Objects
+const apples = { name: "Apples" };
+const bananas = { name: "Bananas" };
+const oranges = { name: "Oranges" };
+
+// Create a Map
+const fruits3 = new Map();
+
+// Add the Objects to the Map
+fruits3.set(apples, 500);
+fruits3.set(bananas, 300);
+fruits3.set(oranges, 200);
+
+console.log(fruits3.get(apples)); //500
+console.log(fruits3.get(bananas)); //300
+```
