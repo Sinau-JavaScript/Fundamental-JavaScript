@@ -776,3 +776,27 @@ console.log(txt7);
 // 5
 // 6
 // 7
+
+console.log("----------------- values() method");
+let hokage2 = new Map([
+  [1, "Hashirama"],
+  [2, "Sarutobi"],
+  [3, "Minato"],
+  [4, "Minato"],
+  [5, "Tsunade"],
+  [6, "Kakashi"],
+  [7, "Naruto"],
+]);
+
+let txt8 = "";
+for (const x of hokage2.values()) {
+  txt8 += `${x} \n`;
+}
+console.log(txt8);
+// Hashirama
+// Sarutobi
+// Minato
+// Minato
+// Tsunade
+// Kakashi
+// Naruto
