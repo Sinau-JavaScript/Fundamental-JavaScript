@@ -557,3 +557,304 @@ for (const num of myNumbers) {
 // 80
 // 90
 ```
+
+## Set()
+
+Set() adalah objek yang berisikan nilai-nilai yang bersifat unik, artinya dalam objek tersebut hanya ada satu nilai saja.
+
+```
+const letters = new Set(["a", "b", "c", "a", "c", "b", "C"]);
+console.log(letters); //Set(4) { 'a', 'b', 'c', 'C' }
+console.log(letters.size); //4
+```
+
+### Membuat Set dengan method add value
+
+```
+const letters2 = new Set();
+letters2.add(1);
+letters2.add(2);
+letters2.add(2);
+letters2.add(3);
+console.log(letters2); //Set(3) { 1, 2, 3 }
+console.log(letters2.size); //3
+```
+
+### Membuat Set dengan Method add Variable
+
+```
+let numb = new Set();
+let a = 1;
+let b = 2;
+let c = 3;
+let d = 1;
+let e = 3;
+numb.add(a);
+numb.add(b);
+numb.add(c);
+numb.add(d);
+numb.add(e);
+
+console.log(numb); //Set(3) { 1, 2, 3 }
+console.log(numb.size); //3
+```
+
+### forEach Pada Set
+
+forEach digunakan untuk mereturn setiap value pada Set()
+
+```
+let letters3 = new Set(["a", "b", "c", "d"]);
+let txt2 = "";
+letters3.forEach(function (value) {
+  txt2 += value + "\n";
+});
+
+console.log(txt2);
+// a
+// b
+// c
+// d
+```
+
+### Values() Method
+
+Digunakan untuk mereturn objek Iterator baru yang berisi semua item yang tersedia dalam set.
+
+```
+let nums = new Set([1, 2, 3, 4]);
+let numsVal = nums.values();
+console.log(numsVal); //[Set Iterator] { 1, 2, 3, 4 }
+console.log(numsVal.next().value); //1
+console.log(numsVal.next().value); //2
+console.log(numsVal.next().value); //3
+console.log(numsVal.next().value); //4
+```
+
+### for of pada values method
+
+for of dapat dimanfaatkan untuk mengakses/mengiterasi object iterator yang dihasilkan dari values method.
+
+```
+let txt3 = "";
+let letter3 = new Set(["a", "b", "c", "e"]);
+
+for (let x of letter3.values()) {
+  txt3 += x + "\n";
+}
+console.log(txt3);
+// a
+// b
+// c
+// e
+```
+
+### Method Keys()
+
+Set tidak memiliki kunci. Fungsinya sama seperti method value() untuk mengembalikan value yang ada di dalam Set
+Method keys ini membuat Sets kompatibel dengan Maps.
+
+```
+let nums2 = new Set([1, 2, 3, 4]);
+console.log(nums2.keys()); //[Set Iterator] { 1, 2, 3, 4 }
+```
+
+### Method Entries()
+
+Set tidak memiliki key, Sehingga entri() akan mengembalikan pasangan [value, value] bukannya pasangan [key, value]. Ini membuat Sets kompatibel dengan Maps
+
+```
+let letters4 = new Set(["a", "b", "c", "d"]);
+let iterator = letters4.entries();
+
+let txt4 = "";
+for (x of iterator) {
+  txt4 += x + "\n";
+}
+
+console.log(txt4);
+// a,a
+// b,b
+// c,c
+// d,d
+```
+
+### method delete()
+
+berfungsi menghapus value pada element Set yang diletakan pada parameter di method ini
+
+```
+let nums3 = new Set([1, 2, 3, 4, 5, 6]);
+console.log(nums3); //Set(6) { 1, 2, 3, 4, 5, 6 }
+nums3.delete(5);
+console.log(nums3); //Set(5) { 1, 2, 3, 4, 6 }
+```
+
+### method clear()
+
+Digunakan untuk menghapus semua value pada Set.
+
+```
+let nums4 = new Set([1, 2, 3, 4, 5, 6]);
+console.log(nums4); //Set(6) { 1, 2, 3, 4, 5, 6 }
+console.log(nums4.clear()); //undefined
+console.log(nums4); //Set(0) {}
+```
+
+### Membuat Array Uniq dari Array yg Valuenya Terduplikasi
+
+```
+let arrDuplicate = [1, 2, 1, 3, 1, 2, 4, 5, 6, 3, 1, 3, 4];
+let setArr = new Set(arrDuplicate);
+console.log(setArr); // Set(6) { 1, 2, 3, 4, 5, 6 }
+let uniqArr = [...setArr];
+console.log(uniqArr); //[ 1, 2, 3, 4, 5, 6 ]
+
+```
+
+### method has()
+
+Digunakan untuk memeriksa nilai pada Set, akan bernilai true apabila nilai yang di berikan pada parameter has ada pada element object set jika sebaliknya akan menghasilkan nilai false
+
+```
+let nums5 = new Set([1, 2, 3, 4, 5]);
+console.log(nums5.has(1)); //true
+console.log(nums5.has(8)); //false
+```
+
+### Contoh Kasus Yang Dipecahkan Menggunakan Set
+
+#### Union
+
+Yaitu mengelompokkan nilai diantara dua kelompok dengan mengabaikan duplikat pada nilai yang terdapat di kedua kelompok tersebut. Seperti contoh berikut mengumpulkan semua value yang terdapat di kelompok engineering dan freelancers berikut
+
+```
+let frontEnd = ["eren", "itachi", "naruto", "sasuke", "sakura", "hinata", "kakasi", lee", "sikamaru", ];
+
+let backEnd = [ "mikasa", "armin", "luffy", "naruto", "kakasi", "sakura", "goku", "hinata", "boruto", "sasuke",];
+let programmer = new Set([...frontEnd, ...backEnd]);
+
+console.log(frontEnd); //['eren', 'itachi', 'naruto', 'sasuke', 'sakura', 'hinata', 'kakasi', 'lee', 'sikamaru']
+console.log(backEnd); //['mikasa', 'armin', 'luffy',  'naruto', 'kakasi', 'sakura', 'goku',   'hinata', 'boruto', 'sasuke']
+console.log(programmer); //Set(14) {  'eren', 'itachi', 'naruto', 'sasuke', 'sakura', 'hinata', 'kakasi', 'lee', 'sikamaru', 'mikasa', 'armin', 'luffy', 'goku', 'boruto'}
+```
+
+### Persimpangan
+
+Digunakan untuk mencari value yang ada di kedua kelompok, seperti contoh berikut:
+
+```
+let frontEnd2 = new Set([
+  "eren",
+  "itachi",
+  "naruto",
+  "sasuke",
+  "sakura",
+  "hinata",
+  "kakasi",
+  "lee",
+  "sikamaru",
+]);
+let backEnd2 = new Set([
+  "mikasa",
+  "armin",
+  "luffy",
+  "naruto",
+  "kakasi",
+  "sakura",
+  "goku",
+  "hinata",
+  "boruto",
+  "sasuke",
+]);
+
+console.log(frontEnd2);
+//Set(9) {
+//   'eren',
+//   'itachi',
+//   'naruto',
+//   'sasuke',
+//   'sakura',
+//   'hinata',
+//   'kakasi',
+//   'lee',
+//   'sikamaru'
+// }
+console.log(backEnd2);
+// Set(10) {
+//   'mikasa',
+//   'armin',
+//   'luffy',
+//   'naruto',
+//   'kakasi',
+//   'sakura',
+//   'goku',
+//   'hinata',
+//   'boruto',
+//   'sasuke'
+// }
+
+let intersection = new Set([...frontEnd2].filter((x) => backEnd2.has(x)));
+console.log(intersection); //Set(5) { 'naruto', 'sasuke', 'sakura', 'hinata', 'kakasi' }
+
+```
+
+### Perbedaan
+
+Case untuk mencari value yang ada di salah satu kelompok tetapi tidak ada di kelompok lainnya.
+
+```
+let frontEnd3 = new Set([
+  "eren",
+  "itachi",
+  "naruto",
+  "sasuke",
+  "sakura",
+  "hinata",
+  "kakasi",
+  "lee",
+  "sikamaru",
+]);
+let backEnd3 = new Set([
+  "mikasa",
+  "armin",
+  "luffy",
+  "naruto",
+  "kakasi",
+  "sakura",
+  "goku",
+  "hinata",
+  "boruto",
+  "sasuke",
+]);
+
+console.log(frontEnd3);
+//Set(9) {
+//   'eren',
+//   'itachi',
+//   'naruto',
+//   'sasuke',
+//   'sakura',
+//   'hinata',
+//   'kakasi',
+//   'lee',
+//   'sikamaru'
+// }
+console.log(backEnd3);
+// Set(10) {
+//   'mikasa',
+//   'armin',
+//   'luffy',
+//   'naruto',
+//   'kakasi',
+//   'sakura',
+//   'goku',
+//   'hinata',
+//   'boruto',
+//   'sasuke'
+// }
+
+let difference = new Set([...frontEnd3].filter((x) => !backEnd3.has(x)));
+console.log(difference);
+//Set(4) { 'eren', 'itachi', 'lee', 'sikamaru' }
+```

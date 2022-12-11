@@ -394,4 +394,260 @@ for (const num of myNumbers) {
 // 80
 // 90
 
-console.log("-----------------------------------");
+console.log("--------------------Sets()");
+const letters = new Set(["a", "b", "c", "a", "c", "b", "C"]);
+console.log(letters); //Set(4) { 'a', 'b', 'c', 'C' }
+console.log(letters.size); //4
+
+console.log("--------------------Sets add value");
+
+const letters2 = new Set();
+letters2.add(1);
+letters2.add(2);
+letters2.add(2);
+letters2.add(3);
+console.log(letters2); //Set(3) { 1, 2, 3 }
+console.log(letters2.size); //3
+
+console.log("--------------------Sets add variable");
+let numb = new Set();
+let a = 1;
+let b = 2;
+let c = 3;
+let d = 1;
+let e = 3;
+numb.add(a);
+numb.add(b);
+numb.add(c);
+numb.add(d);
+numb.add(e);
+
+console.log(numb); //Set(3) { 1, 2, 3 }
+console.log(numb.size); //3
+
+console.log("-----------------forEach pada Set");
+let letters3 = new Set(["a", "b", "c", "d"]);
+let txt2 = "";
+letters3.forEach(function (value) {
+  txt2 += value + "\n";
+});
+
+console.log(txt2);
+// a
+// b
+// c
+// d
+
+console.log("-----------------values() method");
+let nums = new Set([1, 2, 3, 4]);
+let numsVal = nums.values();
+console.log(numsVal); //[Set Iterator] { 1, 2, 3, 4 }
+console.log(numsVal.next().value); //1
+console.log(numsVal.next().value); //2
+console.log(numsVal.next().value); //3
+console.log(numsVal.next().value); //4
+
+console.log("---------------for of values()");
+let txt3 = "";
+let letter3 = new Set(["a", "b", "c", "e"]);
+
+for (let x of letter3.values()) {
+  txt3 += x + "\n";
+}
+console.log(txt3);
+// a
+// b
+// c
+// e
+
+console.log("--------------- keys() method");
+let nums2 = new Set([1, 2, 3, 4]);
+console.log(nums2.keys()); //[Set Iterator] { 1, 2, 3, 4 }
+
+console.log("--------------- entries() method");
+let letters4 = new Set(["a", "b", "c", "d"]);
+let iterator = letters4.entries();
+
+let txt4 = "";
+for (x of iterator) {
+  txt4 += x + "\n";
+}
+
+console.log(txt4);
+// a,a
+// b,b
+// c,c
+// d,d
+
+console.log(typeof letters4);
+console.log(letters4 instanceof Set);
+
+console.log("---- membuat Array unik dari array yg valuenya terduplikasi ---");
+
+let arrDuplicate = [1, 2, 1, 3, 1, 2, 4, 5, 6, 3, 1, 3, 4];
+let setArr = new Set(arrDuplicate);
+console.log(setArr); // Set(6) { 1, 2, 3, 4, 5, 6 }
+let uniqArr = [...setArr];
+console.log(uniqArr); //[ 1, 2, 3, 4, 5, 6 ]
+
+console.log("----------delete() method-----");
+let nums3 = new Set([1, 2, 3, 4, 5, 6]);
+console.log(nums3); //Set(6) { 1, 2, 3, 4, 5, 6 }
+nums3.delete(5);
+console.log(nums3); //Set(5) { 1, 2, 3, 4, 6 }
+
+console.log("----------clear() method-----");
+let nums4 = new Set([1, 2, 3, 4, 5, 6]);
+console.log(nums4); //Set(6) { 1, 2, 3, 4, 5, 6 }
+console.log(nums4.clear()); //undefined
+console.log(nums4); //Set(0) {}
+
+console.log("----------has() method-----");
+let nums5 = new Set([1, 2, 3, 4, 5]);
+console.log(nums5.has(1)); //true
+console.log(nums5.has(8)); //false
+
+console.log(
+  "----------contoh problem solving menggunakan set-----------------"
+);
+
+console.log("---------- case Union -----");
+let frontEnd = [
+  "eren",
+  "itachi",
+  "naruto",
+  "sasuke",
+  "sakura",
+  "hinata",
+  "kakasi",
+  "lee",
+  "sikamaru",
+];
+
+let backEnd = [
+  "mikasa",
+  "armin",
+  "luffy",
+  "naruto",
+  "kakasi",
+  "sakura",
+  "goku",
+  "hinata",
+  "boruto",
+  "sasuke",
+];
+
+let programmer = new Set([...frontEnd, ...backEnd]);
+
+console.log(frontEnd); //['eren', 'itachi', 'naruto', 'sasuke', 'sakura', 'hinata', 'kakasi', 'lee', 'sikamaru']
+console.log(backEnd); //['mikasa', 'armin', 'luffy',  'naruto', 'kakasi', 'sakura', 'goku',   'hinata', 'boruto', 'sasuke']
+console.log(programmer); //Set(14) {  'eren', 'itachi', 'naruto', 'sasuke', 'sakura', 'hinata', 'kakasi', 'lee', 'sikamaru', 'mikasa', 'armin', 'luffy', 'goku', 'boruto'}
+
+console.log("------------------------ Persimpangan");
+let frontEnd2 = new Set([
+  "eren",
+  "itachi",
+  "naruto",
+  "sasuke",
+  "sakura",
+  "hinata",
+  "kakasi",
+  "lee",
+  "sikamaru",
+]);
+let backEnd2 = new Set([
+  "mikasa",
+  "armin",
+  "luffy",
+  "naruto",
+  "kakasi",
+  "sakura",
+  "goku",
+  "hinata",
+  "boruto",
+  "sasuke",
+]);
+
+console.log(frontEnd2);
+//Set(9) {
+//   'eren',
+//   'itachi',
+//   'naruto',
+//   'sasuke',
+//   'sakura',
+//   'hinata',
+//   'kakasi',
+//   'lee',
+//   'sikamaru'
+// }
+console.log(backEnd2);
+// Set(10) {
+//   'mikasa',
+//   'armin',
+//   'luffy',
+//   'naruto',
+//   'kakasi',
+//   'sakura',
+//   'goku',
+//   'hinata',
+//   'boruto',
+//   'sasuke'
+// }
+
+let intersection = new Set([...frontEnd2].filter((x) => backEnd2.has(x)));
+console.log(intersection); //Set(5) { 'naruto', 'sasuke', 'sakura', 'hinata', 'kakasi' }
+
+console.log("---------------------- Perbedaan");
+let frontEnd3 = new Set([
+  "eren",
+  "itachi",
+  "naruto",
+  "sasuke",
+  "sakura",
+  "hinata",
+  "kakasi",
+  "lee",
+  "sikamaru",
+]);
+let backEnd3 = new Set([
+  "mikasa",
+  "armin",
+  "luffy",
+  "naruto",
+  "kakasi",
+  "sakura",
+  "goku",
+  "hinata",
+  "boruto",
+  "sasuke",
+]);
+
+console.log(frontEnd3);
+//Set(9) {
+//   'eren',
+//   'itachi',
+//   'naruto',
+//   'sasuke',
+//   'sakura',
+//   'hinata',
+//   'kakasi',
+//   'lee',
+//   'sikamaru'
+// }
+console.log(backEnd3);
+// Set(10) {
+//   'mikasa',
+//   'armin',
+//   'luffy',
+//   'naruto',
+//   'kakasi',
+//   'sakura',
+//   'goku',
+//   'hinata',
+//   'boruto',
+//   'sasuke'
+// }
+
+let difference = new Set([...frontEnd3].filter((x) => !backEnd3.has(x)));
+console.log(difference);
+//Set(4) { 'eren', 'itachi', 'lee', 'sikamaru' }
