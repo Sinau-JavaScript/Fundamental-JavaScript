@@ -39,3 +39,23 @@ Masalah dengan contoh pertama di atas adalah Anda harus memanggil dua fungsi unt
 Masalah dengan contoh kedua, adalah Anda tidak dapat mencegah fungsi kalkulator menampilkan hasilnya.
 
 Karena problem inilah kita butuh Callbakcs
+
+### Callbacks JavaScript
+
+Callback adalah fungsi yang diteruskan sebagai argumen ke fungsi lain.
+
+Menggunakan callback, Anda dapat memanggil fungsi kalkulator (myCalculator3) dengan callback (myCallback), dan biarkan fungsi kalkulator menjalankan callback setelah perhitungan selesai:
+
+```
+function myCalculator3(num1, num2, myCallback) {
+  let sum = num1 + num2;
+  myCallback(sum);
+}
+
+myCalculator3(2, 5, displayer3); //7
+
+function displayer3(some) {
+  console.log(some);
+}
+
+```

@@ -21,3 +21,15 @@ myCalculator2(3, 3); //6
 function displayer2(some) {
   console.log(some);
 }
+
+console.log("---------------- callback javascript");
+function myCalculator3(num1, num2, myCallback) {
+  let sum = num1 + num2;
+  myCallback(sum);
+}
+
+myCalculator3(2, 5, displayer3); //7
+
+function displayer3(some) {
+  console.log(some);
+}
