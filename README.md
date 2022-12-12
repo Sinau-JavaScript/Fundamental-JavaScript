@@ -18,3 +18,24 @@ function displayer(some) {
 displayer(myCalculator(2, 6)); //8
 
 ```
+
+Atau kita bisa memanggil function kalkulator (myCalculator2) dan membiarkan function kalkulator tersebut memanggil function displayer2 untuk menampilkan hasil dari funnction kalkulator.
+
+```
+function myCalculator2(num1, num2) {
+  let sum = num1 + num2;
+  displayer2(sum);
+}
+
+myCalculator2(3, 3); //6
+
+function displayer2(some) {
+  console.log(some);
+}
+```
+
+Masalah dengan contoh pertama di atas adalah Anda harus memanggil dua fungsi untuk menampilkan hasilnya.
+
+Masalah dengan contoh kedua, adalah Anda tidak dapat mencegah fungsi kalkulator menampilkan hasilnya.
+
+Karena problem inilah kita butuh Callbakcs
