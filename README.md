@@ -129,3 +129,11 @@ Pada contoh di atas, timeDisplayer() digunakan sebagai callback.
 <br>timeDisplayer() diteruskan ke setInterval() sebagai argumen.
 <br>
 1000 adalah jumlah milisecond antar interval, jadi timeDisplayer() akan dipanggil setiap detik.
+
+### Callback Alternatives
+
+Dengan pemrograman asinkron, program JavaScript dapat memulai tugas yang berjalan lama, dan terus menjalankan tugas lain secara paralel.
+<br>
+Namun, program asinkron sulit untuk ditulis dan sulit untuk di-debug.
+<br>
+Oleh karena itu, sebagian besar metode JavaScript asinkron modern tidak menggunakan callback. Sebagai gantinya, dalam JavaScript pemrograman asinkron diselesaikan menggunakan Promises sebagai gantinya.
