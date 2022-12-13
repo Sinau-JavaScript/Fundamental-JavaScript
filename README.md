@@ -169,3 +169,70 @@ Saat producing code mendapatkan hasilnya, ia harus memanggil salah satu dari dua
 | ------- | ----------------------- |
 | Success | myResolve(result value) |
 | Error   | myReject(error object)  |
+
+### Promise Object Properties
+
+Objek Janji JavaScript dapat berupa:
+
+- Pending
+- Fulfilled
+- Rejected
+
+Objek Janji mendukung dua properti: state dan result.
+<br>
+Saat objek Promise "pending" (working), resultnya adalah undefined.
+<br>
+Saat objek Promise "Fulfilled", resultnya adalah sebuah value.
+<br>
+Saat objek Promise "Rejected", resultnya adalah objek error
+
+| myPromise.state | myPromise.result |
+| --------------- | ---------------- |
+| "pending"       | undefined        |
+| "fulfilled"     | a result value   |
+| "rejected"      | an error object  |
+
+Kita tidak dapat mengakses properti Promise states dan result.
+<br>
+Kita harus menggunakan metode promise untuk meghandle promise.
+
+### Promise How To
+
+Berikut cara menggunakan promise:
+
+```
+myPromise.then(
+  function(value) { /_ code if successful _/ },
+  function(error) { /_ code if some error _/ }
+);
+```
+
+Promise.then() membutuhkan dua argumen, satu callback untuk success dan satu lagi untuk failure.
+<br>
+Keduanya opsional, sehingga Anda dapat menambahkan panggilan balik hanya untuk success atau failure.
+
+```
+let myPromise = new Promise(function (resolve, reject) {
+  // some code (try to change x to 5)
+  let x = 0;
+
+  if (x === 0) {
+    resolve("ok");
+  } else {
+    reject("error");
+  }
+});
+
+myPromise.then(
+  function (value) {
+    displayer(value);
+  },
+  function (error) {
+    displayer(error);
+  }
+); //ok
+
+function displayer(some) {
+  console.log(some);
+}
+```
