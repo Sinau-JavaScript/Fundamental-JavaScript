@@ -85,3 +85,33 @@ console.log(posNums); //[ 4, 1, 5, 9 ]
 ## Asynchronous
 
 fungsi yang berjalan paralel dengan fungsi lain disebut asynchronous.
+
+### Waiting a Timeout
+
+Saat menggunakan fungsi setTimeout JavaScript (), kita dapat menentukan fungsi callback untuk dieksekusi setelah waktu habis:
+
+```
+setTimeout(display, 3000);
+
+function display() {
+  console.log("Hallo World!");
+}
+```
+
+Pada contoh di atas, function display digunakan sebagai callback. function display diteruskan ke setTimeout() sebagai argumen. 3000 adalah jumlah milidetik sebelum waktu habis, jadi display() akan dijalankan setelah 3 detik.
+
+Kita juga bisa meneruskan seluruh fungsi sebagai argumen ke fungsi lain:
+
+```
+setTimeout(function () {displayer("Hello");}, 5000);
+
+function displayer(some) {
+  console.log(some);
+}
+```
+
+Pada contoh di atas, function(){ displayer("Hello"); } digunakan sebagai panggilan balik. Ini adalah fungsi yang lengkap. Fungsi lengkap diteruskan ke setTimeout() sebagai argumen.
+
+### Waiting for Interval
+
+Saat menggunakan fungsi JavaScript setInterval(), kita dapat menentukan fungsi panggilan balik yang akan dijalankan untuk setiap interval:
