@@ -81,3 +81,7 @@ function removeNeg(numbers, callback) {
 
 console.log(posNums); //[ 4, 1, 5, 9 ]
 ```
+
+## Asynchronous
+
+fungsi yang berjalan paralel dengan fungsi lain disebut asynchronous.
