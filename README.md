@@ -115,3 +115,17 @@ Pada contoh di atas, function(){ displayer("Hello"); } digunakan sebagai panggil
 ### Waiting for Interval
 
 Saat menggunakan fungsi JavaScript setInterval(), kita dapat menentukan fungsi panggilan balik yang akan dijalankan untuk setiap interval:
+
+```
+setInterval(timeDisplayer, 1000);
+
+function timeDisplayer() {
+  let d = new Date();
+  console.log(`${d.getHours()} : ${d.getMinutes()} : ${d.getSeconds()}`);
+}
+```
+
+Pada contoh di atas, timeDisplayer() digunakan sebagai callback.
+<br>timeDisplayer() diteruskan ke setInterval() sebagai argumen.
+<br>
+1000 adalah jumlah milisecond antar interval, jadi timeDisplayer() akan dipanggil setiap detik.
