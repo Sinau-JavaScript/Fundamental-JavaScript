@@ -44,6 +44,8 @@ Karena problem inilah kita butuh Callbakcs
 
 Callback adalah fungsi yang diteruskan sebagai argumen ke fungsi lain.
 
+#### example 1
+
 Menggunakan callback, Anda dapat memanggil fungsi kalkulator (myCalculator3) dengan callback (myCallback), dan biarkan fungsi kalkulator menjalankan callback setelah perhitungan selesai:
 
 ```
@@ -58,4 +60,24 @@ function displayer3(some) {
   console.log(some);
 }
 
+```
+
+#### example 2
+
+```
+const myNums = [4, 1, -20, -7, 5, 9, -6];
+
+const posNums = removeNeg(myNums, (x) => x >= 0);
+
+function removeNeg(numbers, callback) {
+  let myArr = [];
+  for (let x of numbers) {
+    if (callback(x)) {
+      myArr.push(x);
+    }
+  }
+  return myArr;
+}
+
+console.log(posNums); //[ 4, 1, 5, 9 ]
 ```
