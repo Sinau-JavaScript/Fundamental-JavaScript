@@ -137,3 +137,35 @@ Dengan pemrograman asinkron, program JavaScript dapat memulai tugas yang berjala
 Namun, program asinkron sulit untuk ditulis dan sulit untuk di-debug.
 <br>
 Oleh karena itu, sebagian besar metode JavaScript asinkron modern tidak menggunakan callback. Sebagai gantinya, dalam JavaScript pemrograman asinkron diselesaikan menggunakan Promises sebagai gantinya.
+
+## Promise
+
+Memproduksi kode" adalah kode yang dapat memakan waktu
+<br>
+"Mengkonsumsi kode" adalah kode yang harus menunggu hasilnya
+<br>
+Promise adalah objek JavaScript yang menautkan produksi kode dan konsumsi kode
+
+Objek promise JavaScript berisi producing code and calls untuk consuming code, berikut syntax dari promise:
+
+```
+let myPromise = new Promise(function(myResolve, myReject) {
+// "Producing Code" (May take some time)
+
+  myResolve(); // when successful
+  myReject();  // when error
+});
+
+// "Consuming Code" (Must wait for a fulfilled Promise)
+myPromise.then(
+  function(value) { /* code if successful */ },
+  function(error) { /* code if some error */ }
+);
+```
+
+Saat producing code mendapatkan hasilnya, ia harus memanggil salah satu dari dua callback:
+
+| Result  | Call                    |
+| ------- | ----------------------- |
+| Success | myResolve(result value) |
+| Error   | myReject(error object)  |
