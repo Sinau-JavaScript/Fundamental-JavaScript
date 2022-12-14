@@ -66,3 +66,38 @@ const timGai = ["Gai", "Neji", "Lee", "Tenten"];
 console.log(timGai[0]); //Gai
 console.log(timGai[timGai.length - 1]); //Tenten
 ```
+
+## Looping Array Elements
+
+```
+const timEbisu = ["Ebisu", "Konohamaru", "Moegi", "Udon"];
+let txt = "";
+
+for (let i = 0; i < timEbisu.length; i++) {
+  txt += `${timEbisu[i]} \n`;
+}
+
+console.log(txt);
+// Ebisu
+// Konohamaru
+// Moegi
+// Udon
+```
+
+Kita juga dapat melakukan looping menggunkan forEach
+
+```
+const fruits = ["banana", "orange", "apple", "mango"];
+let txt2 = "";
+fruits.forEach(displayer);
+
+function displayer(value) {
+  txt2 += `${value} \n`;
+}
+
+console.log(txt2);
+// banana
+// orange
+// apple
+// mango
+```

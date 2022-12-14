@@ -26,3 +26,33 @@ console.log("------------ Accessing Last and first Array Element");
 const timGai = ["Gai", "Neji", "Lee", "Tenten"];
 console.log(timGai[0]); //Gai
 console.log(timGai[timGai.length - 1]); //Tenten
+
+console.log("--------------- Looping");
+
+const timEbisu = ["Ebisu", "Konohamaru", "Moegi", "Udon"];
+let txt = "";
+
+for (let i = 0; i < timEbisu.length; i++) {
+  txt += `${timEbisu[i]} \n`;
+}
+
+console.log(txt);
+// Ebisu
+// Konohamaru
+// Moegi
+// Udon
+
+console.log("--------------- Looping forEach");
+const fruits = ["banana", "orange", "apple", "mango"];
+let txt2 = "";
+fruits.forEach(displayer);
+
+function displayer(value) {
+  txt2 += `${value} \n`;
+}
+
+console.log(txt2);
+// banana
+// orange
+// apple
+// mango
