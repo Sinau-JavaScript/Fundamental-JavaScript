@@ -22,3 +22,15 @@ myPromise.then(
 function displayer(some) {
   console.log(some);
 }
+
+console.log("------------- promise waiting for a Timeout");
+
+let promise = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    resolve("Hello");
+  }, 3000);
+});
+
+promise.then(function (value) {
+  console.log(value);
+}); //Hello

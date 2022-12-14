@@ -236,3 +236,22 @@ function displayer(some) {
   console.log(some);
 }
 ```
+
+Untuk mendemonstrasikan penggunaan promise, kita akan menggunakan contoh callback dari bab sebelumnya:
+
+- Waiting for a Timeout
+- Waiting for a File
+
+### Waiting For a Timeout
+
+```
+let promise = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    resolve("Hello");
+  }, 3000);
+});
+
+promise.then(function (value) {
+  console.log(value);
+}); //Hello
+```
