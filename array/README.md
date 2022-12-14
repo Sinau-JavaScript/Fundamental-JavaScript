@@ -49,3 +49,20 @@ Kita dapat mengakses elemen array dengan mengacu pada nomor indeks:
 const tim10 = ["Asuma", "Ino", "Chouji", "Shikamaru"];
 console.log(tim10[0]); //Asuma
 ```
+
+## Length Property
+
+Length Property dari array mengembalikan panjang array (jumlah elemen array).
+
+```
+const tim8 = ["Akamaru", "Hinata", "Kiba", "Shino", "Kurenai"];
+console.log(tim8.length); //5
+```
+
+## Accessing The First and Last Array Element
+
+```
+const timGai = ["Gai", "Neji", "Lee", "Tenten"];
+console.log(timGai[0]); //Gai
+console.log(timGai[timGai.length - 1]); //Tenten
+```

@@ -17,3 +17,12 @@ console.log(tim7); //[ 'Naruto', 'Sasuke', 'Sakura' ]
 console.log("----------------- Access Array");
 const tim10 = ["Asuma", "Ino", "Chouji", "Shikamaru"];
 console.log(tim10[0]); //Asuma
+
+console.log("------------------ Length Property");
+const tim8 = ["Akamaru", "Hinata", "Kiba", "Shino", "Kurenai"];
+console.log(tim8.length); //5
+
+console.log("------------ Accessing Last and first Array Element");
+const timGai = ["Gai", "Neji", "Lee", "Tenten"];
+console.log(timGai[0]); //Gai
+console.log(timGai[timGai.length - 1]); //Tenten
