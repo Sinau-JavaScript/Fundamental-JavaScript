@@ -101,3 +101,34 @@ console.log(txt2);
 // apple
 // mango
 ```
+
+## Adding Array Element
+
+Cara termudah untuk menambahkan elemen baru ke dalam array adalah menggunakan metode push() :
+
+```
+
+const hokage = [
+  "Hashirama",
+  "Tobirama",
+  "Hiruzen",
+  "Minato",
+  "Tsunade",
+  "Kakashi",
+];
+
+console.log(hokage);
+//[ 'Hashirama', 'Tobirama', 'Hiruzen', 'Minato', 'Tsunade', 'Kakashi' ]
+
+hokage.push("Naruto");
+console.log(hokage);
+//['Hashirama', 'Tobirama', 'Hiruzen', 'Minato', 'Tsunade', 'Kakashi', 'Naruto' ]
+```
+
+Elemen baru juga dapat ditambahkan ke array menggunakan properti length:
+
+```
+hokage[hokage.length] = "Sarada";
+console.log(hokage);
+//['Hashirama', 'Tobirama', 'Hiruzen', 'Minato', 'Tsunade', 'Kakashi', 'Naruto', 'Sarada' ]
+```

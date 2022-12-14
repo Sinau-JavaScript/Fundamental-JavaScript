@@ -56,3 +56,24 @@ console.log(txt2);
 // orange
 // apple
 // mango
+
+console.log("--------- Adding Array Element");
+const hokage = [
+  "Hashirama",
+  "Tobirama",
+  "Hiruzen",
+  "Minato",
+  "Tsunade",
+  "Kakashi",
+];
+
+console.log(hokage);
+//[ 'Hashirama', 'Tobirama', 'Hiruzen', 'Minato', 'Tsunade', 'Kakashi' ]
+
+hokage.push("Naruto");
+console.log(hokage);
+//['Hashirama', 'Tobirama', 'Hiruzen', 'Minato', 'Tsunade', 'Kakashi', 'Naruto' ]
+
+hokage[hokage.length] = "Sarada";
+console.log(hokage);
+//['Hashirama', 'Tobirama', 'Hiruzen', 'Minato', 'Tsunade', 'Kakashi', 'Naruto', 'Sarada' ]
