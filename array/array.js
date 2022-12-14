@@ -13,3 +13,7 @@ console.log(jinchuriki); //[ 'Utakata', 'Naruto', 'Gaara', 'Killer Bee' ]
 console.log("-------------------- keyword New");
 const tim7 = new Array("Naruto", "Sasuke", "Sakura");
 console.log(tim7); //[ 'Naruto', 'Sasuke', 'Sakura' ]
+
+console.log("----------------- Access Array");
+const tim10 = ["Asuma", "Ino", "Chouji", "Shikamaru"];
+console.log(tim10[0]); //Asuma

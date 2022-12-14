@@ -40,3 +40,12 @@ Kita juga bisa membuat array menggunakan keyword New
 const tim7 = new Array("Naruto", "Sasuke", "Sakura");
 console.log(tim7); //[ 'Naruto', 'Sasuke', 'Sakura' ]
 ```
+
+## Access Array
+
+Kita dapat mengakses elemen array dengan mengacu pada nomor indeks:
+
+```
+const tim10 = ["Asuma", "Ino", "Chouji", "Shikamaru"];
+console.log(tim10[0]); //Asuma
+```
