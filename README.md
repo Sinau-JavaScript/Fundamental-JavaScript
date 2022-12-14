@@ -255,3 +255,119 @@ promise.then(function (value) {
   console.log(value);
 }); //Hello
 ```
+
+## Async Await
+
+"Async dan Await membuat promise lebih mudah untuk ditulis"
+<br>
+Async membuat fungsi mengembalikan Janji
+<br>
+Await membuat fungsi menunggu Janji
+
+### Async Syntax
+
+Keyword async harus dicantumkan sebelum membuat fungsi yang mengembalikan promise:
+
+```
+async function myFunction() {
+  return "Hello";
+}
+```
+
+code diatas akan sama dengan:
+
+```
+function myFunction() {
+return Promise.resolve("Hello");
+}
+```
+
+Berikut adalah cara menggunakan promise:
+
+```
+myFunction().then(
+  function(value) { /* code if successful */ },
+  function(error) { /* code if some error */ }
+);
+```
+
+### example 1
+
+```
+function displayer(some) {
+  console.log(some);
+}
+
+async function myFunction() {return "Hello";}
+
+myFunction().then(
+  function (value) {displayer(value);},
+  function (error) {displayer(error);}
+);
+```
+
+Atau bisa lebih sederhana jika kita hanya memerlukan value normal (respon normal bukan error):
+
+```
+function displayer2(some) {
+  console.log(some);
+}
+
+async function myFunction2() {return "Hello2";}
+
+myFunction2().then(
+  function (value) {displayer2(value);}
+  );
+```
+
+### Await
+
+Keyword await hanya dapat digunakan di dalam fungsi async.
+<br>
+Keyword await membuat fungsi menjeda eksekusi dan menunggu sampai promise resolved sebelum melanjutkan:
+
+```
+let value = await promise;
+```
+
+Berikut contoh penggaunaan await
+
+```
+async function displayGreating() {
+  let myPromise = new Promise(function (resolve, reject) {
+    resolve("Hello World");
+  });
+  console.log(await myPromise);
+}
+displayGreating(); //Hello World
+```
+
+Dua argumen (resolve and reject) sudah ditentukan sebelumnya oleh JavaScript.
+<br>
+Kita tidak perlu membuatnya, Kita bisa memanggil salah satunya saat fungsi pelaksana sudah siap.
+<br>
+Dalam pengaplikasiannya terkadang kita tidak memerlukan fungsi reject.
+
+```
+async function displayGeating2() {
+  let myPromise = new Promise(function (resolve) {
+    resolve("Good Morning");
+  });
+  console.log(await myPromise);
+}
+displayGeating2();
+```
+
+### Async Await pada Waiting For a Timeout
+
+```
+async function displayGreeting() {
+  let myPromise = new Promise(function (resolve) {
+    setTimeout(function () {
+      resolve("Good Luck");
+    }, 3000);
+  });
+  console.log(await myPromise);
+}
+displayGreeting();
+```
