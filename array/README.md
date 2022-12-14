@@ -31,3 +31,12 @@ jinchuriki[3] = "Killer Bee";
 
 console.log(jinchuriki); //[ 'Utakata', 'Naruto', 'Gaara', 'Killer Bee' ]
 ```
+
+### Keyword New
+
+Kita juga bisa membuat array menggunakan keyword New
+
+```
+const tim7 = new Array("Naruto", "Sasuke", "Sakura");
+console.log(tim7); //[ 'Naruto', 'Sasuke', 'Sakura' ]
+```

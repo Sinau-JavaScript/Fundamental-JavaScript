@@ -9,3 +9,7 @@ jinchuriki[2] = "Gaara";
 jinchuriki[3] = "Killer Bee";
 
 console.log(jinchuriki); //[ 'Utakata', 'Naruto', 'Gaara', 'Killer Bee' ]
+
+console.log("-------------------- keyword New");
+const tim7 = new Array("Naruto", "Sasuke", "Sakura");
+console.log(tim7); //[ 'Naruto', 'Sasuke', 'Sakura' ]
