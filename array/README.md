@@ -132,3 +132,28 @@ hokage[hokage.length] = "Sarada";
 console.log(hokage);
 //['Hashirama', 'Tobirama', 'Hiruzen', 'Minato', 'Tsunade', 'Kakashi', 'Naruto', 'Sarada' ]
 ```
+
+## How to Recognize an Array
+
+Saat kita menggunakan operator typeof untuk mencari tahu apakah sebuah variabel array ata bukan, operator tersebut akan mereturn object
+
+```
+const yonko = ["Big Mom", "Shirohige", "Shanks", "Kaido"];
+console.log(typeof yonko); //object
+```
+
+Untuk mengatasi masalah ini ECMAScript 5 (JavaScript 2009) mendefinisikan metode Array.isArray():
+
+```
+console.log(Array.isArray(yonko)); //true
+```
+
+Method ini akan menggembalikan true jika variabel yang dimaksud benar array, dan akan mereturn false jika sebaliknya
+
+kita juga bisa menggunakan operator instanceof
+
+```
+console.log(yonko instanceof Array); //true
+```
+
+Operator ini jugan akan mereturn true jika variabel yang dituju dibuat dengan konstruktor tertentu (dalam hal ini Array), dan akan mereturn false jika sebaliknya

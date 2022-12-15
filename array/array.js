@@ -77,3 +77,9 @@ console.log(hokage);
 hokage[hokage.length] = "Sarada";
 console.log(hokage);
 //['Hashirama', 'Tobirama', 'Hiruzen', 'Minato', 'Tsunade', 'Kakashi', 'Naruto', 'Sarada' ]
+
+console.log("--------------- How to Recognize an Array");
+const yonko = ["Big Mom", "Shirohige", "Shanks", "Kaido"];
+console.log(typeof yonko); //object
+console.log(Array.isArray(yonko)); //true
+console.log(yonko instanceof Array); //true
